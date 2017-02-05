@@ -1,0 +1,254 @@
+/* Icon Forward */
+.hvr-icon-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s; }
+
+.hvr-icon-forward:before {
+  content: ">";
+  position: absolute;
+  padding: 0 87px;
+  font-family: 'Poppins', sans-serif;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.hvr-icon-forward:hover:before, .hvr-icon-forward:focus:before, .hvr-icon-forward:active:before {
+  -webkit-transform: translateX(4px);
+  transform: translateX(4px); }
+
+body {
+  color: #0b3059;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; }
+
+* {
+  box-sizing: border-box; }
+
+p {
+  font-size: 1.1em; }
+
+.spaced {
+  margin-top: 20px;
+  line-height: 155%; }
+
+.center {
+  text-align: center; }
+
+.img-responsive {
+  width: 100%; }
+
+.body-padding {
+  padding: 40px 20px; }
+
+.emphasis-font {
+  font-family: 'Montserrat', sans-serif; }
+
+.emphasis-button {
+  height: 52px;
+  width: 170px;
+  border: none; }
+
+.button-font {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.1em; }
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+  transition: 0.2s all linear; }
+  .navbar-default .navbar-brand {
+    color: #0b3059;
+    font-weight: 600; }
+
+.navbar-default.change-color {
+  background-color: rgba(245, 100, 118, 0.9); }
+
+#navbar-left > li > a:hover, #navbar-brand:hover {
+  color: #F8F4E3;
+  transition: 0.13s all linear; }
+
+.nav-right-button:hover {
+  border: 1px solid #F8F4E3;
+  color: #F8F4E3;
+  transition: 0.13s all linear; }
+
+.container-fluid.nav {
+  padding: 0 20px; }
+
+.header {
+  height: 580px;
+  background-image: url("../img/header.jpg");
+  background-size: cover; }
+
+.form-wrapper {
+  width: 100%;
+  height: 400px;
+  margin: 60px auto; }
+
+.header-form {
+  width: 340px;
+  height: 100%;
+  padding: 30px;
+  margin: 120px auto 0;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.83);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .header-form p {
+    font-size: 1.25em; }
+  .header-form .no-transparent {
+    opacity: 1; }
+
+.header-button {
+  width: 100%;
+  background-color: #53D8FB; }
+
+.header-button:hover {
+  background-color: #08c7f9; }
+
+.mission-group {
+  margin: 30px 0; }
+
+.cause-info {
+  width: 75%;
+  margin: 0 auto; }
+
+.cause-img {
+  width: 100px; }
+
+.hero {
+  height: 600px;
+  background-image: url("../img/header.png"); }
+
+.hero-info {
+  height: 40%;
+  padding: 100px 50px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.83); }
+
+.hero-button {
+  width: 170px;
+  background-color: #E43F6F;
+  color: white; }
+
+.donate {
+  height: 100%;
+  background-image: url("../img/donate1.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around; }
+  .donate h3 {
+    margin-top: 0; }
+
+.donate-info {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 20px;
+  color: black; }
+
+.donate-button {
+  margin-top: 4%;
+  background-color: #E43F6F;
+  color: white;
+  transition: 0.13s all linear; }
+
+.donate-button:hover {
+  background-color: #e85e86;
+  color: white; }
+
+.success {
+  background-color: white; }
+
+.form-control, button.sign-up {
+  width: 100%;
+  height: 53px;
+  margin-bottom: -16px;
+  border-radius: 0; }
+
+.success-group {
+  margin-top: 56px; }
+
+.success-video {
+  height: 381px;
+  background-color: lightgreen; }
+
+.success-info {
+  height: 381px;
+  background-color: white; }
+
+.join-us {
+  padding-top: 15px;
+  padding-left: 7px;
+  padding-right: 7px; }
+
+footer {
+  background-color: darkgray;
+  height: 200px; }
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 2.57em; }
+  h3 {
+    font-size: 2.15em; }
+  p {
+    font-size: 1.25em; }
+  .container-fluid.nav {
+    width: 73%; }
+  .nav-right-button {
+    background-color: transparent;
+    border: 1px solid #0b3059;
+    color: #0b3059;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 5px 8px; }
+  #navbar-left > li > a, #navbar-brand {
+    padding-top: 20px;
+    color: #0b3059;
+    font-weight: 600; }
+  .form-wrapper {
+    width: 80%; }
+  .header-form {
+    margin-left: 0; }
+  .header {
+    height: 650px; }
+  .cause-info {
+    width: 100%; }
+  .donate-info {
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px; }
+  .donate-button {
+    margin-top: 2%; }
+  .hero-info {
+    float: right;
+    height: 100%; }
+  .form-inline {
+    display: flex;
+    justify-content: center; }
+  .form-inline .form-control {
+    width: 280px; }
+  button.sign-up {
+    width: auto; } }
+
+@media screen and (min-width: 950px) {
+  .mission, .success-inner, .join {
+    width: 80%;
+    margin: 0 auto; }
+  .hero {
+    padding-right: 30px; } }
