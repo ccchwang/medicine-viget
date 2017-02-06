@@ -89,7 +89,7 @@ p {
   padding: 0 20px; }
 
 .header {
-  height: 650px;
+  height: 590px;
   background-image: url("../img/header.jpg");
   background-size: cover; }
   .header .col-sm-12 {
@@ -102,12 +102,11 @@ p {
 
 .shape {
   width: 100%;
-  height: 100%;
   margin: 0; }
 
 .top {
   height: 0;
-  border-width: 0 190px 650px 0;
+  border-width: 0 190px 590px 0;
   border-style: solid;
   border-color: transparent transparent rgba(255, 245, 200, 0.83); }
 
@@ -115,18 +114,13 @@ p {
 .header-form {
   position: absolute;
   top: 100px;
-  left: 20px;
+  left: 10px;
   z-index: 2;
-  margin: 0;
-  padding: 20px 0 0px 30px;
+  margin-right: 40%;
+  padding: 20px 0 0px 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border-width: 0 175px 0 0;
-  border-style: solid;
-  border-color: transparent transparent transparent; }
-  .header-form p {
-    font-size: 1.25em; }
+  justify-content: space-between; }
   .header-form button {
     margin-top: 7%; }
 
@@ -260,17 +254,17 @@ footer {
     font-weight: 600; }
   .form-wrapper {
     width: 100%;
-    height: 720px;
+    height: 650px;
     margin: 0 auto; }
   .shape {
-    width: 700px;
-    height: 720px;
+    width: 670px;
+    height: 650px;
     margin: 0; }
   .top {
     position: relative;
-    border-width: 0 230px 720px 0; }
+    border-width: 0 230px 650px 0; }
   .header {
-    height: 720px; }
+    height: 650px; }
   .header-form {
     border: none;
     width: 450px;
