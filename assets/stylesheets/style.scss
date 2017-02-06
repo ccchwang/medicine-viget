@@ -6,7 +6,7 @@
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
-  padding-right: 2.2em;
+  padding-right: 1.6em;
   -webkit-transition-duration: 0.1s;
   transition-duration: 0.1s;
 }
@@ -175,7 +175,7 @@ p {
 
 
 .header-button{
-  width: 72%;
+  width: 85%;
   margin: 0 auto;
   background-color: #53D8FB;
 }
@@ -376,10 +376,12 @@ footer {
     border: none;
     width: 450px;
     height: 400px;
-    left: 30px
+    left: 30px;
   }
 
-
+  .header-button{
+    width: 72%;
+  }
 
 // .header-form{
 //   width: 340px;
