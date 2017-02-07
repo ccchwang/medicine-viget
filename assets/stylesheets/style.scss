@@ -65,6 +65,13 @@ p {
 .emphasis-font {
   font-family: 'Montserrat', sans-serif;
 }
+
+.noemphasis {
+  font-size:1.6em;
+  margin-top: 0;
+
+}
+
 .emphasis-button {
   height: 58px;
   width: 170px;
@@ -283,22 +290,59 @@ p {
   width: 100%;
   height: 53px;
   margin-bottom: -16px;
-  border-radius: 0;
+  font-size: 1.15em;
+   font-weight: 500;
 }
+.form-inline {
+  margin-bottom: 10%;
+
+}
+
+.round1, .round2, .no-round {
+    border: 1px solid lightgray
+  }
+  .round1 {
+    border-radius: 5px 5px 0px 0px;
+  }
+  .round2 {
+    border-radius: 0 0 5px 5px;
+  }
+  .no-round {
+    border-radius: 0;
+  }
 
 .success-group {
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .success-video {
-  height: 381px;
+
   background-color: lightgreen;
 }
 
 .success-info {
-  height: 381px;
+
   background-color: white;
 }
+
+.secondary-img {
+  width: 70px;
+}
+
+.secondary-description{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start
+}
+
+.text-right{
+  text-align: left;
+  padding-left: 4%;
+  padding-bottom: 6%;
+}
+
+
 
 //GET INVOLVED
 .join-us {
@@ -327,6 +371,11 @@ footer {
   p {
     font-size: 1.25em;
   }
+  .noemphasis {
+  font-size:1.7em;
+   font-weight: 500;
+}
+
   //NAV
   .container-fluid.nav {
     width: 73%;
@@ -422,12 +471,24 @@ footer {
     justify-content: center;
   }
 
+
+
+
   .form-inline .form-control {
     width: 280px;
   }
    button.sign-up {
     width: auto
   }
+
+  .round1 {
+    border-radius: 5px 0px 0px 5px;
+  }
+  .round2 {
+    border-radius: 0px 5px 5px 0px;
+  }
+
+
 
   //HERO
   .hero {
