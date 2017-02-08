@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- we get the bootstrap css file first -->
-    <link href="../assets/stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="../assets/bootstrap/bootstrap.css" rel="stylesheet">
     <link href="../assets/stylesheets/hover-min.css" rel="stylesheet">
     <!-- and then our own - allowing us to overwrite a given rule bootstrap already defined -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,500,600|Poppins:500" rel="stylesheet">
@@ -53,16 +53,13 @@
 
 <!--HEADER SECTION-->
 <div class="container-fluid header center">
-
-  <div class="row">
-    <div class="col-sm-12">
-
-        <div class="shape">
-        <div class="top">
+        <div class="header-shape">
+        <div class="header-diagonal">
           <form class="header-form">
             <h2 class="emphasis-font">Education for All<span style="color: #53D8FB">.</span></h2>
-            <p class="spaced">100% of your donation go to girls in low-income countries who will be the first in their families to graduate high school.
-              100% of your donation go to girls in low-income countries who will be the first in their families to graduate high school.
+            <p class="spaced">100% of your donation go to students in low-income countries who will be the first in their families to graduate high school.
+              <br><br>
+            This is the hero section to introduce your site.
           </p>
             <button type="submit" class="header-button emphasis-button button-font hvr-icon-forward btn btn-default">MEET THEM</button>
           </form>
@@ -76,14 +73,12 @@
           <button type="submit" class="header-button emphasis-button button-font hvr-icon-forward btn btn-default">MEET THEM &#0020 &#0020 &#0020</button>
         </form>-->
 
-      </div>
-    </div>
+
   </div>
 </div>
 
-<!--ABOUT SECTION-->
-<div class="mission body-padding center">
-
+<!--CAUSE SECTION-->
+<div class="cause body-padding center">
 
     <h2 class="emphasis-font">Donate for charity & stop the war!</h2>
     <p class="spaced">This is the “First Content Block”. It consists of 2 sections. Upper section is a parent page and the 3 columns below are its child pages. Page to be shown here can be selected from the dropdown menu within the customizer front page section. </p>
@@ -91,17 +86,17 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-12 col-sm-4 mission-group">
+      <div class="col-sm-12 col-sm-4 cause-group">
         <img class="cause-img" src="../public/img/plant.png">
         <h3 class="emphasis-font">First Cause</h3>
         <p class="cause-info spaced">This is the first child page of the parent above. Content consists of featured image and text. Lorem ipsum dolor sit amet, consectetur.</p>
       </div>
-      <div class="col-sm-12 col-sm-4 mission-group">
+      <div class="col-sm-12 col-sm-4 cause-group">
         <img class="cause-img" src="../public/img/grain.png">
         <h3 class="emphasis-font">Second Cause</h3>
         <p class="cause-info spaced">This is the first child page of the parent above. Content consists of featured image and text. Lorem ipsum dolor sit amet, consectetur.</p>
       </div>
-      <div class="col-sm-12 col-sm-4 mission-group">
+      <div class="col-sm-12 col-sm-4 cause-group">
         <img class="cause-img" src="../public/img/woman.png">
         <h3 class="emphasis-font">Third Cause</h3>
         <p class="cause-info spaced">This is the first child page of the parent above. Content consists of featured image and text. Lorem ipsum dolor sit amet, consectetur.</p>
@@ -125,34 +120,38 @@
 
 </div>
 
-<!--HERO SECTION-->
+<!--SUCCESS SECTION-->
+<div class="success clearfix">
+    <div class="success-shape">
+        <div class="success-diagonal">
+          <div class="success-info">
+            <h2 class="emphasis-font">We're making strides. Since 2011:</h2>
+            <h3 class="emphasis-font">2,216 Scholarships</h3>
+            <h3 class="emphasis-font">2,216 Scholarships</h3>
+            <h3 class="emphasis-font">805 Scholars</h3>
+            <h3 class="emphasis-font">180 Graduated</h3>
+            <h3 class="emphasis-font">216 Campus Chapters</h3>
+            <h3 class="emphasis-font">200 Campus Alumni</h3>
 
-<div class="hero body-padding clearfix">
+        </div>
+        </div>
+      </div>
 
-  <div class="col-sm-12 col-md-5 hero-info">
-    <h2 class="emphasis-font">We're making strides. Since 2011:</h2>
-    <h3 class="emphasis-font">2,216 Scholarships</h3>
-    <h3 class="emphasis-font">2,216 Scholarships</h3>
-    <h3 class="emphasis-font">805 Scholars</h3>
-    <h3 class="emphasis-font">180 Graduated</h3>
-    <h3 class="emphasis-font">216 Campus Chapters</h3>
-    <h3 class="emphasis-font">200 Campus Alumni</h3>
-    <!--<button type="submit" class="emphasis-button hero-button button-font btn btn-default">LEARN MORE ></button>-->
-  </div>
+
 
 </div>
 
 
 
-<!--SUCCESS SECTION-->
+<!--PROGRAM SECTION-->
 
-<div class="success">
-  <div class="success-inner body-padding">
+<div class="program">
+  <div class="program-inner body-padding">
 
-    <div class="container-fluid clearfix success-group">
+    <div class="container-fluid clearfix program-group">
       <div class="row">
-        <div class="col-sm-12 col-sm-5 success-video"></div>
-        <div class="col-sm-12 col-sm-7 success-info">
+        <div class="col-sm-12 col-sm-5 program-video"></div>
+        <div class="col-sm-12 col-sm-7 program-info">
 
           <div class="secondary-description">
             <img class="secondary-img" src="../public/img/3.png">
@@ -249,7 +248,7 @@
 
       <script src="../assets/jquery/jquery-3.1.1.min.js"></script>
       <!-- for example, bootstrap.js! -->
-      <!--<script src="/bootstrap/js/bootstrap.min.js"></script>-->
+      <script src="../assets/bootstrap/bootstrap.min.js"></script>
       <!-- then we add our own in the order we expect them to be run -->
 
       <script src="../public/js/main.js"></script>

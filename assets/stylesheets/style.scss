@@ -90,26 +90,61 @@ p {
   background-color: transparent;
   border: none;
   transition: 0.2s all linear;
-  .navbar-brand {
-    color: #0b3059;
-    font-weight: 600
-  }
 }
 
 .navbar-default.change-color {
   background-color: rgba(245 ,100, 118,1)
 }
 
-#navbar-left > li > a:hover, #navbar-brand:hover {
-    color: #FFFDAA;
+// #navbar-left > li > a:hover, #navbar-brand:hover {
+//     color: #FFFDAA;
+//     transition: 0.13s all linear;
+// }
+
+
+  .nav-right-button {
+    background-color: transparent;
+    border: 1px solid #0b3059;
+    color: #0b3059;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 5px 8px;
     transition: 0.13s all linear;
-}
+  }
+
+  #navbar-left > li > a, #navbar-brand {
+    color: #0b3059;
+    font-weight: 600;
+    transition: 0.13s all linear;
+  }
+  #navbar-left > li > a:hover, #navbar-brand:hover{
+    color: #FFFDAA;
+  }
 
 .nav-right-button:hover {
     border: 1px solid #FFFDAA;
     color: #FFFDAA;
-    transition: 0.13s all linear;
   }
+  .navbar-default .navbar-toggle {
+    border-color: #0b3059;
+    transition: 0.13s all linear;
+    .icon-bar {
+      background-color: #0b3059;
+      transition: 0.13s all linear;
+    }
+  }
+
+  .navbar-default .navbar-toggle:hover {
+    border-color: #FFFDAA;
+    background-color: transparent;
+    .icon-bar {
+      background-color: #FFFDAA
+    }
+  }
+  .navbar-default .navbar-toggle:focus {
+    background-color: transparent
+  }
+
 
 // .box-shadow {
 //   width: 100%;
@@ -127,13 +162,9 @@ p {
 //HEADER
 .header {
   height: 590px;
+  padding: 0;
   background-image: url("../img/header.jpg");
   background-size: cover;
-
-  .col-sm-12 {
-      padding: 0;
-  }
-
 }
 
 .form-wrapper {
@@ -142,20 +173,18 @@ p {
   margin: 0;
 }
 
-.shape {
+.header-shape {
     width:100%;
-
     margin:0;
-
 }
-.top {
+.header-diagonal {
   height: 0;
   border-width: 0 190px 590px 0;
   border-style:solid;
   border-color:transparent transparent rgba(255,245,200, 0.83);
 }
 /* Support transparent border colors in IE6. */
-// * html .top {
+// * html .header-diagonal {
 //     filter:chroma(color=#123456);
 //     border-top-color:#123456;
 //     border-left-color:#123456;
@@ -163,14 +192,14 @@ p {
 
 .header-form{
   position: absolute;
-  top: 100px;
+  top: 120px;
   left: 10px;
   z-index: 2;
   margin-right: 40%;
-  padding: 20px 0 0px 25px;
+  padding: 20px 0 0px 7%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
     // border-width: 0 60% 0 0;
     // border-style:solid;
     // border-color:transparent transparent transparent;
@@ -193,7 +222,7 @@ p {
 
 
 //MISSION
-.mission-group {
+.cause-group {
   margin: 30px 0;
 }
 
@@ -206,22 +235,41 @@ p {
   width: 100px;
 }
 
-//HERO
-.hero {
+//SUCCESS
+.success {
   background-image: url("../img/header.png");
   background-size: cover;
 
 }
-.hero-info {
-  padding: 35px;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.80);
+// .success-info {
+//   padding: 35px;
+//   border-radius: 4px;
+//   background-color: rgba(255, 255, 255, 0.80);
 
-}
-.hero-button {
+// }
+
+.success-button {
   width: 170px;
   background-color: #E43F6F;
   color: white;
+}
+ .success-shape {
+
+    margin:0;
+}
+.success-diagonal {
+  position: relative;
+  height: 0;
+  border-width: 0 0 700px 190px;
+  border-style:solid;
+  border-color:transparent transparent rgba(255,245,200, 0.83);
+}
+.success-info {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 //DONATE
@@ -283,7 +331,7 @@ p {
 }
 
 //SUCCESS AND SIGN UP
-.success {
+.program {
   background-color: white;
 }
 
@@ -330,17 +378,17 @@ p {
     border-radius: 0;
   }
 
-.success-group {
+.program-group {
   margin-top: 30px;
   margin-bottom: 50px;
 }
 
-.success-video {
+.program-video {
 
   background-color: lightgreen;
 }
 
-.success-info {
+.program-info {
 
   background-color: white;
 }
@@ -399,21 +447,9 @@ footer {
   .container-fluid.nav {
     width: 73%;
   }
-  .nav-right-button {
-    background-color: transparent;
-    border: 1px solid #0b3059;
-    color: #0b3059;
-    font-weight: 600;
-    border-radius: 3px;
-    padding: 5px 8px;
-  }
-
   #navbar-left > li > a, #navbar-brand {
     padding-top: 20px;
-    color: #0b3059;
-    font-weight: 600;
   }
-
 
 
   //HEADER
@@ -424,13 +460,13 @@ footer {
   margin: 0 auto;
 }
 
-.shape {
+.header-shape {
     width:670px;
     height: 650px;
     margin:0;
 
 }
-.top {
+.header-diagonal {
     position: relative;
     border-width: 0 230px 650px 0;
 }
@@ -443,7 +479,7 @@ footer {
   .header-form {
     border: none;
     width: 450px;
-    height: 400px;
+    height: 350px;
     left: 30px;
   }
 
@@ -509,13 +545,16 @@ footer {
 
 
 
-  //HERO
-  .hero {
+  //SUCCESS
+  .success {
      height: 700px;
     h2 {
       font-size: 2.9em;
     }
   }
+  .success-shape {
+    padding-left:50%;
+}
 
 
 
@@ -527,7 +566,7 @@ footer {
 
 
   //BODY PADDING
-  .mission, .success-inner, .join {
+  .cause, .program-inner, .join {
     width: 80%;
     margin: 0 auto;
   }
@@ -541,17 +580,23 @@ footer {
 }
 
 
-  .hero {
-    padding-right: 30px;
+
+
+
+}
+
+//all screens bigger than 950px
+@media screen and (min-width: 1600px) {
+  .header {
+      height: 720px;
+    }
+    .header-shape {
+      width:800px;
+      }
+  .header-diagonal {
+    border-width: 0 230px 720px 0;
   }
-
-  //HERO
-  .hero-info {
-    float: right;
-    padding-left: 55px;
-
+  .header-form {
+    left: 90px;
   }
-
-
-
 }
