@@ -237,9 +237,9 @@ p {
 
 //SUCCESS
 .success {
-  background-image: url("../img/header.png");
+  background-image: url("../img/header copy.png");
   background-size: cover;
-
+  height: 600px;
 }
 // .success-info {
 //   padding: 35px;
@@ -260,16 +260,25 @@ p {
 .success-diagonal {
   position: relative;
   height: 0;
-  border-width: 0 0 700px 190px;
+  border-width: 0 0 600px 190px;
   border-style:solid;
-  border-color:transparent transparent rgba(255,245,200, 0.83);
+  border-color:transparent transparent rgba(211,239,255, 0.83);
 }
 .success-info {
+  top: 129px;
+  width: 100%;
+  right: 7%;
   position: absolute;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  h3 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 //DONATE
@@ -412,10 +421,23 @@ p {
 
 
 //GET INVOLVED
-.join-us {
-  padding-top: 15px;
+.join {
+  .row {
+    margin: 0;
+  }
+  .col-sm-3 {
+    height: 247px;
+    width: 247px;
+    padding-top: 15px;
   padding-left: 5px;
   padding-right: 5px;
+  }
+}
+.join-us {
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/friends.jpg");
+  background-size: cover;
 }
 
 //FOOTER
@@ -555,7 +577,9 @@ footer {
   .success-shape {
     padding-left:50%;
 }
-
+.success-diagonal {
+  border-width: 0 0 700px 190px;
+}
 
 
 }
@@ -578,7 +602,16 @@ footer {
     padding-left: 7px;
     padding-right: 7px;
 }
+.success-info {
+  right: 4%;
+  h3 {
+    font-size: 38px;
 
+  }
+  p {
+    font-size: 25px;
+  }
+}
 
 
 

@@ -171,8 +171,9 @@ p {
   width: 100px; }
 
 .success {
-  background-image: url("../img/header.png");
-  background-size: cover; }
+  background-image: url("../img/header copy.png");
+  background-size: cover;
+  height: 600px; }
 
 .success-button {
   width: 170px;
@@ -185,16 +186,23 @@ p {
 .success-diagonal {
   position: relative;
   height: 0;
-  border-width: 0 0 700px 190px;
+  border-width: 0 0 600px 190px;
   border-style: solid;
-  border-color: transparent transparent rgba(255, 245, 200, 0.83); }
+  border-color: transparent transparent rgba(211, 239, 255, 0.83); }
 
 .success-info {
+  top: 129px;
+  width: 100%;
+  right: 7%;
   position: absolute;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
+  .success-info h3 {
+    font-size: 28px; }
+  .success-info p {
+    font-size: 18px; }
 
 .donate {
   height: 100%;
@@ -304,10 +312,21 @@ button.sign-up:hover {
   padding-left: 4%;
   padding-bottom: 6%; }
 
-.join-us {
+.join .row {
+  margin: 0; }
+
+.join .col-sm-3 {
+  height: 247px;
+  width: 247px;
   padding-top: 15px;
   padding-left: 5px;
   padding-right: 5px; }
+
+.join-us {
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/friends.jpg");
+  background-size: cover; }
 
 footer {
   background-color: darkgray;
@@ -371,7 +390,9 @@ footer {
     .success h2 {
       font-size: 2.9em; }
   .success-shape {
-    padding-left: 50%; } }
+    padding-left: 50%; }
+  .success-diagonal {
+    border-width: 0 0 700px 190px; } }
 
 @media screen and (min-width: 950px) {
   .cause, .program-inner, .join {
@@ -381,7 +402,13 @@ footer {
     width: 88%; }
   .join-us {
     padding-left: 7px;
-    padding-right: 7px; } }
+    padding-right: 7px; }
+  .success-info {
+    right: 4%; }
+    .success-info h3 {
+      font-size: 38px; }
+    .success-info p {
+      font-size: 25px; } }
 
 @media screen and (min-width: 1600px) {
   .header {
