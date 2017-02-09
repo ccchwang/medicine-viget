@@ -47,6 +47,9 @@ body {
 p {
   font-size: 1.1em;
 }
+h2 {
+  font-weight: 600;
+}
 
 .spaced {
   margin-top: 20px;
@@ -275,6 +278,7 @@ p {
   justify-content: space-around;
   h3 {
     font-size: 28px;
+    font-weight: 600;
   }
   p {
     font-size: 18px;
@@ -421,23 +425,18 @@ p {
 
 
 //GET INVOLVED
-.join {
-  .row {
-    margin: 0;
-  }
-  .col-sm-3 {
-    height: 247px;
-    width: 247px;
-    padding-top: 15px;
+.join-us {
+  padding-top: 15px;
   padding-left: 5px;
   padding-right: 5px;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 100%;
+    color: white
   }
-}
-.join-us {
-  height: 100%;
-  width: 100%;
-  background-image: url("../img/friends.jpg");
-  background-size: cover;
 }
 
 //FOOTER

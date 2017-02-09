@@ -39,6 +39,9 @@ body {
 p {
   font-size: 1.1em; }
 
+h2 {
+  font-weight: 600; }
+
 .spaced {
   margin-top: 20px;
   line-height: 155%; }
@@ -200,7 +203,8 @@ p {
   flex-direction: column;
   justify-content: space-around; }
   .success-info h3 {
-    font-size: 28px; }
+    font-size: 28px;
+    font-weight: 600; }
   .success-info p {
     font-size: 18px; }
 
@@ -312,21 +316,17 @@ button.sign-up:hover {
   padding-left: 4%;
   padding-bottom: 6%; }
 
-.join .row {
-  margin: 0; }
-
-.join .col-sm-3 {
-  height: 247px;
-  width: 247px;
+.join-us {
   padding-top: 15px;
   padding-left: 5px;
-  padding-right: 5px; }
-
-.join-us {
-  height: 100%;
-  width: 100%;
-  background-image: url("../img/friends.jpg");
-  background-size: cover; }
+  padding-right: 5px;
+  position: relative; }
+  .join-us h2 {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 100%;
+    color: white; }
 
 footer {
   background-color: darkgray;
