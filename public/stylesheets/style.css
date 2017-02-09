@@ -37,10 +37,7 @@ body {
   box-sizing: border-box; }
 
 p {
-  font-size: 1.1em; }
-
-h2 {
-  font-weight: 600; }
+  font-size: 1.15em; }
 
 .spaced {
   margin-top: 20px;
@@ -56,11 +53,12 @@ h2 {
   padding: 40px 20px; }
 
 .emphasis-font {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; }
 
-.noemphasis {
-  font-size: 1.6em;
-  margin-top: 0; }
+.light-emphasis-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; }
 
 .emphasis-button {
   height: 58px;
@@ -203,8 +201,7 @@ h2 {
   flex-direction: column;
   justify-content: space-around; }
   .success-info h3 {
-    font-size: 28px;
-    font-weight: 600; }
+    font-size: 28px; }
   .success-info p {
     font-size: 18px; }
 
@@ -310,6 +307,9 @@ button.sign-up:hover {
   display: flex;
   flex-direction: row;
   align-items: flex-start; }
+  .secondary-description h3 {
+    font-size: 24px;
+    margin-top: 0; }
 
 .text-right {
   text-align: left;
@@ -339,9 +339,8 @@ footer {
     font-size: 2.15em; }
   p {
     font-size: 1.25em; }
-  .noemphasis {
-    font-size: 1.7em;
-    font-weight: 500; }
+  .light-emphasis-font {
+    font-size: 26px; }
   .container-fluid.nav {
     width: 73%; }
   #navbar-left > li > a, #navbar-brand {
@@ -392,7 +391,9 @@ footer {
   .success-shape {
     padding-left: 50%; }
   .success-diagonal {
-    border-width: 0 0 700px 190px; } }
+    border-width: 0 0 700px 190px; }
+  .secondary-description h3 {
+    font-size: 26px; } }
 
 @media screen and (min-width: 950px) {
   .cause, .program-inner, .join {

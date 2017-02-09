@@ -45,11 +45,9 @@ body {
   box-sizing: border-box;
 }
 p {
-  font-size: 1.1em;
+  font-size: 1.15em;
 }
-h2 {
-  font-weight: 600;
-}
+
 
 .spaced {
   margin-top: 20px;
@@ -68,13 +66,14 @@ h2 {
 }
 .emphasis-font {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 500
+}
+.light-emphasis-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400
 }
 
-.noemphasis {
-  font-size:1.6em;
-  margin-top: 0;
 
-}
 
 .emphasis-button {
   height: 58px;
@@ -278,7 +277,7 @@ h2 {
   justify-content: space-around;
   h3 {
     font-size: 28px;
-    font-weight: 600;
+
   }
   p {
     font-size: 18px;
@@ -413,7 +412,11 @@ h2 {
 .secondary-description{
   display: flex;
   flex-direction: row;
-  align-items: flex-start
+  align-items: flex-start;
+  h3 {
+    font-size: 24px;
+    margin-top: 0;
+  }
 }
 
 .text-right{
@@ -459,10 +462,11 @@ footer {
   p {
     font-size: 1.25em;
   }
-  .noemphasis {
-  font-size:1.7em;
-   font-weight: 500;
+
+.light-emphasis-font {
+  font-size: 26px;
 }
+
 
   //NAV
   .container-fluid.nav {
@@ -578,6 +582,11 @@ footer {
 }
 .success-diagonal {
   border-width: 0 0 700px 190px;
+}
+.secondary-description{
+  h3 {
+    font-size: 26px;
+  }
 }
 
 
