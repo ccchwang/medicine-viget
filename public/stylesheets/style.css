@@ -323,14 +323,22 @@ button.sign-up:hover {
   position: relative; }
   .join-us h2 {
     position: absolute;
-    top: 60%;
-    left: 10%;
+    font-size: 28px;
+    top: 65%;
+    left: 8%;
     width: 100%;
     color: white; }
 
+.minor {
+  padding-top: 14px; }
+
 footer {
-  background-color: darkgray;
-  height: 200px; }
+  background: linear-gradient(120deg, #183059, #114B5F);
+  height: 100%; }
+  footer p, footer h3 {
+    color: white;
+    letter-spacing: 0.8px;
+    font-weight: 200; }
 
 @media screen and (min-width: 768px) {
   h2 {
@@ -393,7 +401,11 @@ footer {
   .success-diagonal {
     border-width: 0 0 700px 190px; }
   .secondary-description h3 {
-    font-size: 26px; } }
+    font-size: 26px; }
+  footer .col-sm-4 {
+    padding-left: 5%; }
+  footer p, footer h3 {
+    text-align: left; } }
 
 @media screen and (min-width: 950px) {
   .cause, .program-inner, .join {
@@ -404,6 +416,10 @@ footer {
   .join-us {
     padding-left: 7px;
     padding-right: 7px; }
+    .join-us h2 {
+      top: 70%;
+      left: 8%;
+      font-size: 2.4em; }
   .success-info {
     right: 4%; }
     .success-info h3 {
