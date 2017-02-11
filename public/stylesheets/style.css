@@ -82,14 +82,14 @@ p {
   background-color: transparent;
   border: 1px solid #0b3059;
   color: #0b3059;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 3px;
   padding: 5px 8px;
   transition: 0.13s all linear; }
 
 #navbar-left > li > a, #navbar-brand {
   color: #0b3059;
-  font-weight: 600;
+  font-weight: 500;
   transition: 0.13s all linear; }
 
 #navbar-left > li > a:hover, #navbar-brand:hover {
@@ -336,9 +336,14 @@ footer {
   background: linear-gradient(120deg, #183059, #114B5F);
   height: 100%; }
   footer p, footer h3 {
+    font-family: "Poppins";
     color: white;
     letter-spacing: 0.8px;
-    font-weight: 200; }
+    font-weight: 300; }
+  footer .col-xs-6 {
+    padding-left: 7%; }
+  footer .col-xs-12 {
+    text-align: center; }
 
 @media screen and (min-width: 768px) {
   h2 {
@@ -347,8 +352,6 @@ footer {
     font-size: 2.15em; }
   p {
     font-size: 1.25em; }
-  .light-emphasis-font {
-    font-size: 26px; }
   .container-fluid.nav {
     width: 73%; }
   #navbar-left > li > a, #navbar-brand {
@@ -375,6 +378,8 @@ footer {
     width: 72%; }
   .cause-info {
     width: 100%; }
+  .cause-group h3 {
+    font-size: 26px; }
   .donate-info {
     margin: 0 auto;
     width: 70%;
@@ -401,11 +406,7 @@ footer {
   .success-diagonal {
     border-width: 0 0 700px 190px; }
   .secondary-description h3 {
-    font-size: 26px; }
-  footer .col-sm-4 {
-    padding-left: 5%; }
-  footer p, footer h3 {
-    text-align: left; } }
+    font-size: 26px; } }
 
 @media screen and (min-width: 950px) {
   .cause, .program-inner, .join {
