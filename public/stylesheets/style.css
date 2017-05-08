@@ -244,6 +244,9 @@ p {
     font-size: 24px;
     margin-top: 0; }
 
+.secondary-img {
+  width: 180px; }
+
 .success {
   background-image: url("../img/header copy.jpg");
   background-size: cover;
