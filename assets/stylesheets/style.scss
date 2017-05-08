@@ -31,7 +31,7 @@ p {
   width: 100%;
 }
 .body-padding {
-  padding: 40px 20px;
+  padding: 50px 20px;
 }
 .emphasis-font {
   font-family: 'Montserrat', sans-serif;
@@ -60,7 +60,7 @@ p {
   transition: 0.2s all linear;
 }
 .navbar-default.change-color {
-  background-color: rgba(245 ,100, 118,1)
+  background-color: #ff798a
 }
 .navbar-default .navbar-toggle {
   border-color: #0b3059;
@@ -164,13 +164,14 @@ p {
 //DONATE
 .donate {
   height: 100%;
-  background-color: lighten(#F4D35E, 10);
+  color: white;
+  background: linear-gradient(-112deg, #0b3059 0%, #0b3059 50%, #0d3a6d 50%);
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-around;
   h3 {
-    color: #E43F6F;
+    color: #ff798a;
     margin-top: 0;
   }
 }
@@ -233,20 +234,32 @@ p {
   margin-bottom: 50px;
 }
 .program-sidebar{
+  max-width: 431px;
+  margin: 0 auto 40px;
   img {
     width: 100%;
     max-width: 400px;
     margin-bottom: 10px;
   }
   .student{
+    position: relative;
     height: 100%;
     width: 92%;
     max-width: 360px;
-
-    color:darken(#F4D35E,15);
-    padding: 7px 18px 12px 18px;
     margin-bottom: 55px;
-    font-style: italic;
+  }
+  .popover-arrow {
+    font-size: 40px;
+    position: absolute;
+    left: 20%;
+    top: 82%;
+    width: 45px;
+  }
+  p {
+    background: #f4d35e;
+    padding: 25px 30px;
+    color: #927200;
+    border-radius: 4px;
   }
 }
 .program-info {
@@ -397,7 +410,7 @@ footer {
     transition: 0.13s all linear;
   }
   a:hover {
-    color: rgba(245 ,100, 118,1);
+    color: #ff798a;
     text-decoration: none;
   }
   img {
@@ -405,7 +418,7 @@ footer {
     transition: 0.13s all linear;
   }
   img:hover {
-    background-color: rgba(245 ,100, 118,1);
+    background-color: #ff798a;
     border-radius: 4px;
   }
   hr {
@@ -443,6 +456,13 @@ footer {
 @media screen and (min-width: 768px) {
 
 //GENERAL
+.body-padding {
+  padding: 100px 20px;
+}
+.donate {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
 h2 {
   font-size: 2.57em;
 }
@@ -519,6 +539,9 @@ p {
     font-size: 26px;
   }
 }
+.program-sidebar .popover-arrow {
+  top: 85.5%;
+}
 
 //SUCCESS
 .success {
@@ -575,6 +598,8 @@ footer {
 .row {
       max-width: 800px;
       margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 20px
     }
 }
 .footer-shape {
