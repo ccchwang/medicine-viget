@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-  var $tabsContainer = $(".tabs");
-    var  $tabIndicator = $("#tab-indicator");
+  let $tabsContainer = $(".tabs"),
+      $tabIndicator = $("#tab-indicator");
 
   //add click handlers to each tab
   ['bio', 'experience', 'reviews', 'resources'].forEach(tab => {
@@ -24,7 +24,6 @@ $(document).ready(function () {
 
 
   function handleTransition($newTab, currentTabPosition, tab) {
-
     let textPosition = $newTab.offset().left,
         tabsPosition = $tabsContainer.offset().left,
         distance = textPosition - tabsPosition,

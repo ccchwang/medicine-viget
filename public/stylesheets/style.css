@@ -33,7 +33,7 @@ figure {
 section {
   overflow: hidden;
   position: relative;
-  height: 667px; }
+  height: 725px; }
   section .tabs-container {
     position: relative;
     padding: 0 30px; }
@@ -87,7 +87,8 @@ section {
 .content {
   position: absolute;
   padding: 15px 30px;
-  visibility: hidden; }
+  visibility: hidden;
+  margin-bottom: 25px; }
   .content h3 {
     font-size: 22px;
     font-weight: 300;
