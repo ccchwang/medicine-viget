@@ -2,7 +2,7 @@
 
 I prioritized mobile first, in congruence with responsive design guidelines.The bulk of my CSS is for a screen smaller than 375px. With this base, I used media queries to make tweaks for larger screens.
 
-After the mobile layout was done, I spent a bulk of my time working on menu tabs for mobile. I didn't want the tabs to take up too much precious space on smaller screens. So I decided that making them horizontally scrollable was better than vertically stacking. Scrollable menus are intuitive for touch screens. I made sure to add white blur to the ends of the menu, to indicate that there's more to see. Keeping the tabs horizontal also meant I didn't have to make too many tweaks for desktop - animations and general layout could be kept the same.
+After the mobile layout was done, I spent a bulk of my time working on menu tabs for mobile. I didn't want the tabs to take up too much precious space on smaller screens. So I decided that making them horizontally scrollable was better than vertically stacking. Scrollable menus are intuitive for touch screens. I made sure to add white blur to the ends of the menu, to indicate that there's more to see. Keeping the tabs horizontal also meant I didn't have to make too many tweaks for desktop - animations and general layout could be kept the same. I turned the green tab underline in the comp into a moving indicator for some fun transition effects.
 
 
 ### Browser Incompatabilities

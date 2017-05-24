@@ -18,12 +18,12 @@ $(document).ready(function () {
       $newTab.attr("aria-selected", "true")
 
       //animate transition from one tab to another
-      handleTransition($newTab, currentTabPosition, tab);
+      handleTransitionAnim($newTab, currentTabPosition, tab);
     })
   })
 
 
-  function handleTransition($newTab, currentTabPosition, tab) {
+  function handleTransitionAnim($newTab, currentTabPosition, tab) {
     let textPosition = $newTab.offset().left,
         tabsPosition = $tabsContainer.offset().left,
         distance = textPosition - tabsPosition,

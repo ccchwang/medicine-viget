@@ -8,7 +8,7 @@ $green: #1FB682;
 }
 
 
-//HEADER & HEADSHOT
+//*** HEADER & HEADSHOT
 #header {
   position: relative;
   height: 50vh;
@@ -42,7 +42,7 @@ figure {
 }
 
 
-//MAIN SECTION
+//*** MAIN SECTION
 section {
   overflow: hidden;
   position: relative;
@@ -107,6 +107,7 @@ section {
     background: white;
     filter: blur(5px);
   }
+
   .tabs-container::after {
     right: 15px;
   }
@@ -118,7 +119,7 @@ section {
 
 
 
-//TEXT CONTENT
+//*** TEXT CONTENT
 .content {
   position: absolute;
   padding: 15px 30px;
@@ -191,6 +192,7 @@ section {
   }
 }
 
+
 @media screen and (min-width: 414px) {
   section {
     .tabs-container, .content {
@@ -233,7 +235,7 @@ section {
   //redefining keyframes for bigger screens
   @keyframes right-show {
     0% {
-      transform: translateX(800px);
+      transform: translateX(900px);
     }
     100% {
       transform: translateX(0px);
@@ -245,7 +247,7 @@ section {
       transform: translateX(0px);
     }
     100% {
-      transform: translateX(-800px);
+      transform: translateX(-900px);
     }
   }
   @keyframes left-hide {
@@ -254,12 +256,12 @@ section {
       transform: translateX(0px);
     }
     100% {
-      transform: translateX(800px);
+      transform: translateX(900px);
     }
   }
   @keyframes left-show {
     0% {
-      transform: translateX(-800px);
+      transform: translateX(-900px);
     }
     100% {
       transform: translateX(0px);

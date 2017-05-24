@@ -157,7 +157,7 @@ section {
     font-size: 18px; }
   @keyframes right-show {
     0% {
-      transform: translateX(800px); }
+      transform: translateX(900px); }
     100% {
       transform: translateX(0px); } }
   @keyframes right-hide {
@@ -165,16 +165,16 @@ section {
       visibility: inherit;
       transform: translateX(0px); }
     100% {
-      transform: translateX(-800px); } }
+      transform: translateX(-900px); } }
   @keyframes left-hide {
     0% {
       visibility: inherit;
       transform: translateX(0px); }
     100% {
-      transform: translateX(800px); } }
+      transform: translateX(900px); } }
   @keyframes left-show {
     0% {
-      transform: translateX(-800px); }
+      transform: translateX(-900px); }
     100% {
       transform: translateX(0px); } } }
 
