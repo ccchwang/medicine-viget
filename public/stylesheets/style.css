@@ -39,6 +39,8 @@ section {
     padding: 0 30px; }
     section .tabs-container nav {
       overflow-x: scroll; }
+    section .tabs-container nav::-webkit-scrollbar {
+      display: none; }
     section .tabs-container .tabs {
       position: relative;
       display: flex;
@@ -68,25 +70,19 @@ section {
         background-color: #1FB682;
         transform-origin: 0 0;
         transition: transform .3s ease-in-out; }
-
-nav::-webkit-scrollbar {
-  display: none; }
-
-.tabs-container::after, .tabs-container::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  height: 31px;
-  width: 25px;
-  top: -10px;
-  background: white;
-  filter: blur(5px); }
-
-.tabs-container::after {
-  right: 15px; }
-
-.tabs-container::before {
-  left: 15px; }
+  section .tabs-container::after, section .tabs-container::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    height: 31px;
+    width: 25px;
+    top: -10px;
+    background: white;
+    filter: blur(5px); }
+  section .tabs-container::after {
+    right: 15px; }
+  section .tabs-container::before {
+    left: 15px; }
 
 .content {
   position: absolute;
@@ -115,6 +111,12 @@ nav::-webkit-scrollbar {
   100% {
     transform: translateX(-600px); } }
 
+@keyframes left-show {
+  0% {
+    transform: translateX(-600px); }
+  100% {
+    transform: translateX(0px); } }
+
 @keyframes left-hide {
   0% {
     visibility: inherit;
@@ -122,19 +124,13 @@ nav::-webkit-scrollbar {
   100% {
     transform: translateX(600px); } }
 
-@keyframes left-show {
-  0% {
-    transform: translateX(-600px); }
-  100% {
-    transform: translateX(0px); } }
-
 @media screen and (min-width: 375px) {
   section .tabs-container .tabs {
     width: 475px; }
   section .tabs-container, section .content {
     padding-right: 36px;
     padding-left: 36px; }
-  .tabs-container::after, .tabs-container::before {
+  section .tabs-container::after, section .tabs-container::before {
     width: 35px; } }
 
 @media screen and (min-width: 414px) {
@@ -143,7 +139,7 @@ nav::-webkit-scrollbar {
     padding-left: 50px; }
   section .content p {
     font-size: 15px; }
-  .tabs-container::after, .tabs-container::before {
+  section .tabs-container::after, section .tabs-container::before {
     width: 45px; } }
 
 @media screen and (min-width: 668px) {

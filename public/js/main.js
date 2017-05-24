@@ -1,32 +1,34 @@
-jQuery(document).ready(function($) {
-  let $tabsContainer = $(".tabs"),
+$(document).ready(function () {
+
+  var $tabsContainer = $(".tabs"),
       $tabIndicator = $("#tab-indicator");
 
+  //add click handlers to each tab
+  ['bio', 'experience', 'reviews', 'resources'].forEach(tab => {
+    let $newTab = $(`.tab-link.${tab}`);
 
-['bio', 'experience', 'reviews', 'resources'].forEach(tab => {
-  let $newTab = $(`.tab-link.${tab}`);
+    $newTab.click(() => {
+      let $currentTab = $("[aria-selected='true']"),
+          currentTabPosition = $currentTab.offset().left;
 
-  $newTab.click(function(e){
-    let $currentTab = $("[aria-selected='true']"),
-        currentTabPosition = $currentTab.offset().left;
+      //turn current tab off
+      $currentTab.attr("aria-selected", "false")
 
-    // Turn current tab off
-    $currentTab.attr("aria-selected", "false")
+      //turn the clicked one on
+      $newTab.attr("aria-selected", "true")
 
-    // Set the clicked one on
-    $newTab.attr("aria-selected", "true")
-    moveIndicator($newTab, currentTabPosition, tab);
+      //animate transition from one tab to another
+      handleTransition($newTab, currentTabPosition, tab);
+    })
   })
-})
 
 
+  function handleTransition($newTab, currentTabPosition, tab) {
 
-
-  function moveIndicator(newTab, currentTabPosition, tab) {
-
-    let textPosition = newTab.offset().left,
+    let textPosition = $newTab.offset().left,
         tabsPosition = $tabsContainer.offset().left,
         distance = textPosition - tabsPosition,
+        //direction that tab is moving towards will influence which animation gets triggered
         direction = currentTabPosition < textPosition ? 'right' : 'left';
 
     //hide content that's currently being shown
@@ -35,9 +37,8 @@ jQuery(document).ready(function($) {
     //show content that matches clicked tab
     $(`.content.${tab}`).addClass('show-content').css('animation', `${direction}-show 0.3s ease-in-out`);
 
-    $tabIndicator.css('transform', `translateX(${distance}px) scaleX(${(newTab.width() + 19) * 0.01})`);
+    //move indicator and scale it to fit tab
+    $tabIndicator.css('transform', `translateX(${distance}px) scaleX(${($newTab.width() + 19) * 0.01})`);
   }
-
-
 });
 

@@ -1,3 +1,4 @@
+$green: #1FB682;
 
 * {
   box-sizing: border-box;
@@ -54,6 +55,9 @@ section {
     nav {
       overflow-x: scroll;
     }
+    nav::-webkit-scrollbar {
+      display: none;  // hides scrollbar on horizontal menu for Safari and Chrome
+    }
     .tabs {
       position: relative;
       display: flex;
@@ -67,8 +71,9 @@ section {
         padding-bottom: 15px;
         transition: 0.15s;
 
+        //currently selected tab
         &[aria-selected="true"] {
-          color: #1FB682;
+          color: $green;
           font-weight: 500;
           text-decoration: none;
           z-index: 20;
@@ -77,7 +82,7 @@ section {
       .tab-link:hover {
         cursor: pointer;
         text-decoration: none;
-        color: #1FB682
+        color: $green
       }
       #tab-indicator {
         position: absolute;
@@ -85,34 +90,30 @@ section {
         left: 0;
         height: 4px;
         width: 81px;
-        background-color: #1FB682;
+        background-color: $green;
         transform-origin: 0 0;
         transition: transform .3s ease-in-out
       }
     }
   }
-}
+  //pseudo elements to add blur to ends of horizontal tabs menu
+  .tabs-container::after, .tabs-container::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    height: 31px;
+    width: 25px;
+    top: -10px;
+    background: white;
+    filter: blur(5px);
+  }
+  .tabs-container::after {
+    right: 15px;
+  }
 
-nav::-webkit-scrollbar {
-    display: none;  // hides scrollbar on horizontal menu for Safari and Chrome
-}
-
-.tabs-container::after, .tabs-container::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  height: 31px;
-  width: 25px;
-  top: -10px;
-  background: white;
-  filter: blur(5px);
-}
-.tabs-container::after {
-  right: 15px;
-}
-
-.tabs-container::before {
-  left: 15px;
+  .tabs-container::before {
+    left: 15px;
+  }
 }
 
 
@@ -137,6 +138,7 @@ nav::-webkit-scrollbar {
   visibility: inherit;
 }
 
+//keyframes to animate content transitions. '-show' keyframes are for content moving into view. '-hide' keyframes are for content moving out of view.
 @keyframes right-show {
   0% {
     transform: translateX(600px);
@@ -154,6 +156,14 @@ nav::-webkit-scrollbar {
     transform: translateX(-600px);
   }
 }
+@keyframes left-show {
+  0% {
+     transform: translateX(-600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 @keyframes left-hide {
   0% {
     visibility: inherit;
@@ -163,14 +173,7 @@ nav::-webkit-scrollbar {
     transform: translateX(600px);
   }
 }
-@keyframes left-show {
-  0% {
-     transform: translateX(-600px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
+
 
 @media screen and (min-width: 375px) {
   section {
@@ -181,16 +184,13 @@ nav::-webkit-scrollbar {
       padding-right: 36px;
       padding-left: 36px;
     }
+    .tabs-container::after, .tabs-container::before {
+      width: 35px
+    }
   }
-
-  .tabs-container::after, .tabs-container::before {
-    width: 35px
-  }
-
 }
 
 @media screen and (min-width: 414px) {
-
   section {
     .tabs-container, .content {
       padding-right: 50px;
@@ -199,12 +199,10 @@ nav::-webkit-scrollbar {
     .content p {
       font-size: 15px
     }
+    .tabs-container::after, .tabs-container::before {
+      width: 45px
+    }
   }
-
-  .tabs-container::after, .tabs-container::before {
-    width: 45px
-  }
-
 }
 
 
@@ -222,7 +220,6 @@ nav::-webkit-scrollbar {
     }
   }
 
-
   figure {
     .headshot-name {
       font-size: 26px;
@@ -232,6 +229,7 @@ nav::-webkit-scrollbar {
     }
   }
 
+  //redefining keyframes for bigger screens
   @keyframes right-show {
     0% {
       transform: translateX(800px);
@@ -294,6 +292,5 @@ nav::-webkit-scrollbar {
       padding-right: 200px;
     }
   }
-
 }
 
