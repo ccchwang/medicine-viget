@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-  var $tabsContainer = $(".tabs"),
-      $tabIndicator = $("#tab-indicator");
+  var $tabsContainer = $(".tabs");
+    var  $tabIndicator = $("#tab-indicator");
 
   //add click handlers to each tab
   ['bio', 'experience', 'reviews', 'resources'].forEach(tab => {
