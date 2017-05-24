@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
     //show content that matches clicked tab
     $(`.content.${tab}`).addClass('show-content').css('animation', `${direction}-show 0.3s ease-in-out`);
 
-    $tabIndicator.css('transform', `translateX(${distance}px) scaleX(${newTab.width() * 0.01})`);
+    $tabIndicator.css('transform', `translateX(${distance}px) scaleX(${(newTab.width() + 19) * 0.01})`);
   }
 
 
