@@ -44,6 +44,13 @@
 .text.-color-dark {
   color: #0e5254; }
 
+.text.-color-lightblue {
+  color: #1394AA;
+  margin-bottom: 30px; }
+
+.text.-color-white {
+  color: white; }
+
 .text.-color-accent {
   color: #BB7140; }
 
@@ -57,6 +64,12 @@ cite a {
 .bg-green {
   background-color: #d2e7e2; }
 
+.bg-blue {
+  background-color: #184d66; }
+
+.bg-gradient {
+  background: linear-gradient(#184d66, #d2e7e2); }
+
 .content-wrap {
   padding: 50px 15px;
   position: relative; }
@@ -65,6 +78,9 @@ cite a {
   padding-right: 30px;
   padding-left: 30px; }
 
+.narrow-padding {
+  padding: 30px 15px 0; }
+
 header {
   height: 32.5vh; }
 
@@ -72,7 +88,7 @@ header {
   width: 100%;
   margin: 17px auto 0; }
 
-.pills, .anatomy {
+.pills, .anatomy, .flo-img, .about-flo-icon {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute; }
@@ -98,8 +114,8 @@ header {
   right: -35px;
   bottom: -45px; }
 
-.intro > p {
-  margin-bottom: 50px; }
+.intro > p, .narrow-padding > p {
+  margin-bottom: 40px; }
 
 .quote-container {
   position: relative;
@@ -168,4 +184,54 @@ header {
   line-height: 1.375; }
 
 .question {
-  padding-top: 75px; }
+  padding-top: 75px;
+  padding-bottom: 140px; }
+
+.meet-flo {
+  padding-top: 145px; }
+
+.flo-img {
+  background-image: url("../../public/img/florence_2.png");
+  width: 270px;
+  height: 300px;
+  top: -140px;
+  right: 0; }
+
+.conversation-card {
+  background-color: white;
+  margin-bottom: 100px; }
+
+.about-flo-icon {
+  width: 100px;
+  height: 200px;
+  top: -62px;
+  right: 0;
+  left: 0;
+  margin: 0 auto; }
+
+.conversation-card.-cup > .about-flo-icon {
+  background-image: url("../../public/img/section-1-illo.png"); }
+
+.conversation-card.-pills > .about-flo-icon {
+  background-image: url("../../public/img/pills_3.png");
+  width: 80px; }
+
+.conversation-card.-temp > .about-flo-icon {
+  background-image: url("../../public/img/section-3-illo.png");
+  width: 80px; }
+
+.conversation-card.-box > .about-flo-icon {
+  background-image: url("../../public/img/section-4-illo.png");
+  width: 260px;
+  top: -40px; }
+
+.conversation-card.-money > .about-flo-icon {
+  background-image: url("../../public/img/section-5-illo.png"); }
+
+.conversation-card.-money {
+  margin-bottom: 140px; }
+
+.conversation-card.-cheer > .about-flo-icon {
+  background-image: url("../../public/img/section-6-illo.png");
+  width: 195px;
+  top: -100px; }
