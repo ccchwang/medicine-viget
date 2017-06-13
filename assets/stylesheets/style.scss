@@ -13,48 +13,55 @@ $green: #1FB682;
   overflow: hidden
 }
 
+
+
 //TEXT STYLES
-.text.caps {
+.text.-caps {
   text-transform: uppercase;
 }
 
-.text.center {
+.centered {
   text-align: center;
 }
 
-.text.bold {
+.text.-bold {
   font-weight: 600;
 }
 
-.text.wide-spacing {
+.text.-wide-spacing {
   letter-spacing: .23em;
 }
 
-.text.serif {
+.text.-serif {
   font-family: 'Merriweather';
   font-weight: 300;
 }
 
-.text.x-small {
+.text.-x-small {
   font-size: 14px;
   line-height: 1.733333333;
 }
 
-.text.small {
+.text.-small {
   font-size: 17px;
   line-height: 1.777777778;
 }
 
-.text.medium {
+.text.-medium {
   font-size: 20px;
   line-height: 1.428571429;
 }
 
-.text.color-dark {
+.text.-large {
+  font-size: 28px;
+  line-height: 1.428571429;
+}
+
+.text.-color-dark {
   color:#0e5254;
 }
 
-.text.color-accent {
+.text.-color-accent {
   color: #BB7140;
 }
 
@@ -72,13 +79,20 @@ cite a{
   background-color: #d2e7e2;
 }
 
+.content-wrap {
+  padding: 50px 15px;
+  position: relative;
+}
+
+.lrg-rl-padding {
+  padding-right: 30px;
+  padding-left: 30px
+}
 
 //HEADER
 
-.header-container {
-  padding: 30px;
-  height: 50vh;
-  position: relative;
+header {
+  height: 32.5vh;
 }
 
 .header-img {
@@ -86,13 +100,13 @@ cite a{
   margin: 17px auto 0;
 }
 
-.pills {
+.pills, .anatomy {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute
 }
 
-.pills.yellow {
+.pills.-yellow {
   background-image: url('../../public/img/pills_7.png');
   height: 55px;
   width: 70px;
@@ -100,7 +114,7 @@ cite a{
   left: 10px;
 }
 
-.pills.multiple {
+.pills.-multiple {
   background-image: url('../../public/img/pills_2.png');
   height: 100px;
   width: 170px;
@@ -108,7 +122,7 @@ cite a{
   right: -105px;
 }
 
-.pills.purple {
+.pills.-purple {
   background-image: url('../../public/img/pills_5.png');
   height: 100px;
   width: 70px;
@@ -118,11 +132,8 @@ cite a{
 
 
 //INTRO SECTION
-.intro {
-  padding: 31px;
-}
 
-.intro > .card > p {
+.intro > p {
   margin-bottom: 50px
 }
 
@@ -152,4 +163,66 @@ cite a{
   position: relative;
   width: 225px;
   left: 45px;
+}
+
+
+//DIAGRAM SECTION
+
+.diagram {
+  padding-top: 25px;
+}
+
+.diagram-details {
+  padding-top: 65px;
+}
+
+.diagram-detail {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 73px 38px 38px;
+}
+
+.diagram-detail > .icon {
+  position: absolute;
+  border-radius: 100px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.diagram-detail > .icon.-borders{
+  width: 88px;
+  height: 88px;
+  top: -33.5px;
+  border: 10px solid rgba(255, 255, 255, 0.57);
+}
+
+
+.diagram-detail > .icon.-color {
+  top: -25px;
+  width: 71px;
+  height: 71px;
+  background-color: #f2c84d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 7px solid white;
+
+  img.resize {
+    width: 65%;
+    padding-top: 4px
+  }
+}
+
+
+.diagram-detail > .content {
+  line-height: 1.375
+}
+
+
+//QUESTION SECTION
+
+.question {
+  padding-top: 75px;
 }
