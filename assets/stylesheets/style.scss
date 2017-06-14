@@ -44,7 +44,7 @@ $green: #1FB682;
 }
 
 .text.-small {
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.777777778;
 }
 
@@ -115,8 +115,13 @@ cite a{
 
 //HEADER
 
+.content-wrap#header {
+  min-height: 50vh;
+}
+
 header {
-  height: 32.5vh;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .header-img {
@@ -124,7 +129,7 @@ header {
   margin: 17px auto 0;
 }
 
-.pills, .anatomy, .flo-img, .about-flo-icon {
+.pills, .anatomy, .flo-img, .flo-diagram, .about-flo-icon, .footer-flo-img {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute
@@ -157,7 +162,7 @@ header {
 
 //INTRO SECTION
 
-.intro > p, .narrow-padding > p {
+.intro > p, .narrow-padding > p, .last-child {
   margin-bottom: 40px
 }
 
@@ -208,14 +213,14 @@ header {
   padding: 73px 38px 38px;
 }
 
-.diagram-detail > .icon {
+.icon {
   position: absolute;
   border-radius: 100px;
   right: 0;
   left: 0;
   margin: 0 auto;
 }
-.diagram-detail > .icon.-borders{
+.icon.-borders{
   width: 88px;
   height: 88px;
   top: -33.5px;
@@ -223,7 +228,7 @@ header {
 }
 
 
-.diagram-detail > .icon.-color {
+.icon.-color {
   top: -25px;
   width: 71px;
   height: 71px;
@@ -234,7 +239,7 @@ header {
   border: 7px solid white;
 
   img.resize {
-    width: 65%;
+    width: 55%;
     padding-top: 4px
   }
 }
@@ -265,6 +270,8 @@ header {
   height: 300px;
   top: -140px;
   right: 0;
+  margin: 0 auto;
+  left: 0;
 }
 
 //ABOUT FLO SECTION
@@ -311,9 +318,64 @@ header {
   margin-bottom: 140px
 }
 
+.conversation-card.-cheer {
+  margin-bottom: 0px
+}
+
 .conversation-card.-cheer > .about-flo-icon {
   background-image: url('../../public/img/section-6-illo.png');
   width: 195px;
     top: -100px;
 }
 
+//BEHIND THE SCENES SECTION
+
+.flo-diagram {
+  position: relative;
+  background-image: url("../../public/img/giant-florence-of-doom.png");
+  width: 160px;
+  height: 300px;
+  margin: 30px auto 0;
+}
+
+
+//FOOTER
+
+footer > button {
+  color: #f2c84d;
+  border: 4px solid #f2c84d;
+  background-color: transparent;
+  padding: 14px 0;
+  border-radius: 32px;
+  width: 220px;
+  margin: 0 auto;
+  display: block;
+}
+
+.footer-flo-img.-bg {
+  background-image: url("../../public/img/section-6-illo-background.png");
+  bottom: -40px;
+  height: 300px;
+  position: absolute;
+  width: 500px;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+}
+
+.footer-flo-img {
+  position: relative;
+  background-image: url("../../public/img/giant-florence-of-doom.png");
+      width: 110px;
+    height: 190px;
+    margin: 0 auto;
+    bottom: -105px;
+}
+
+
+@media screen and (min-width: 440px) {
+
+  header {
+    margin-bottom: 50px;
+  }
+}
