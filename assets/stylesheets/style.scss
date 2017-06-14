@@ -134,7 +134,7 @@ header {
   margin: 17px auto 0;
 }
 
-.pills, .anatomy, .flo-img, .flo-diagram, .about-flo-icon, .footer-flo-img {
+.pills, .anatomy, .flo-img, .flo-diagram, .about-flo-icon, .footer-flo-img, .question > .phone {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute
@@ -245,7 +245,8 @@ header {
 
 .question {
   padding-top: 75px;
-  padding-bottom: 140px
+  padding-bottom: 140px;
+  position: relative;
 }
 
 
@@ -381,7 +382,8 @@ footer > button {
   }
 
   #intro {
-    border-radius: 6px
+    border-radius: 6px;
+    margin-bottom: 100px;
   }
 
   .conversation-card {
@@ -444,5 +446,15 @@ footer > button {
     height: 401px;
     left: -175px;
     top: -70px;
+  }
+  .phone {
+    background-image: url('../../public/img/phone.png');
+    width: 270px;
+    height: 445px;
+    right: -150px;
+    top: 230px;
+  }
+  .question > .narrow-padding {
+    width: 700px
   }
 }

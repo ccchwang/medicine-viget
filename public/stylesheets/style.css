@@ -97,7 +97,7 @@ header {
   width: 100%;
   margin: 17px auto 0; }
 
-.pills, .anatomy, .flo-img, .flo-diagram, .about-flo-icon, .footer-flo-img {
+.pills, .anatomy, .flo-img, .flo-diagram, .about-flo-icon, .footer-flo-img, .question > .phone {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute; }
@@ -180,7 +180,8 @@ header {
 
 .question {
   padding-top: 75px;
-  padding-bottom: 140px; }
+  padding-bottom: 140px;
+  position: relative; }
 
 .meet-flo {
   padding-top: 145px; }
@@ -281,7 +282,8 @@ footer > button {
   .content-wrap {
     padding: 75px 100px; }
   #intro {
-    border-radius: 6px; }
+    border-radius: 6px;
+    margin-bottom: 100px; }
   .conversation-card {
     border-radius: 6px; }
   .pills.-double {
@@ -327,4 +329,12 @@ footer > button {
     width: 190px;
     height: 401px;
     left: -175px;
-    top: -70px; } }
+    top: -70px; }
+  .phone {
+    background-image: url("../../public/img/phone.png");
+    width: 270px;
+    height: 445px;
+    right: -150px;
+    top: 230px; }
+  .question > .narrow-padding {
+    width: 700px; } }
