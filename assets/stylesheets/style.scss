@@ -13,6 +13,9 @@ $green: #1FB682;
   overflow: hidden
 }
 
+.mobile-no-show {
+  visibility: hidden;
+}
 
 
 //TEXT STYLES
@@ -89,6 +92,10 @@ cite a{
   background-color: #d2e7e2;
 }
 
+.bg-white {
+  background-color: white;
+}
+
 .bg-blue {
   background-color: #184d66;
 }
@@ -157,6 +164,7 @@ header {
   width: 70px;
   right: -35px;
   bottom: -45px;
+  z-index: 1
 }
 
 
@@ -189,9 +197,7 @@ header {
 }
 
 .quote {
-  position: relative;
-  width: 225px;
-  left: 45px;
+  text-align: center;
 }
 
 

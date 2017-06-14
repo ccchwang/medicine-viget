@@ -9,6 +9,9 @@
 #main {
   overflow: hidden; }
 
+.mobile-no-show {
+  visibility: hidden; }
+
 .text.-caps {
   text-transform: uppercase; }
 
@@ -64,6 +67,9 @@ cite a {
 .bg-green {
   background-color: #d2e7e2; }
 
+.bg-white {
+  background-color: white; }
+
 .bg-blue {
   background-color: #184d66; }
 
@@ -116,7 +122,8 @@ header {
   height: 100px;
   width: 70px;
   right: -35px;
-  bottom: -45px; }
+  bottom: -45px;
+  z-index: 1; }
 
 .intro > p, .narrow-padding > p, .last-child {
   margin-bottom: 40px; }
@@ -141,9 +148,7 @@ header {
   top: 20px; }
 
 .quote {
-  position: relative;
-  width: 225px;
-  left: 45px; }
+  text-align: center; }
 
 .diagram {
   padding-top: 25px; }
