@@ -13,10 +13,6 @@ $green: #1FB682;
   overflow: hidden
 }
 
-.mobile-no-show {
-  visibility: hidden;
-}
-
 
 //TEXT STYLES
 .text.-caps {
@@ -156,7 +152,7 @@ header {
   background-image: url('../../public/img/pills_2.png');
   height: 100px;
   width: 170px;
-  top: -5px;
+  top: -6px;
   right: -105px;
 }
 
@@ -181,22 +177,7 @@ header {
   height: 100%
 }
 
-.bottle-1 {
-  background-image: url("../../public/img/pills_3.png");
-      width: 70px;
-    height: 140px;
-    left: -50px;
-    top: 81px;
-    z-index: 1;
-}
 
-.bottle-2 {
-  background-image: url('../../public/img/pills_4.png');
-    width: 55px;
-    height: 140px;
-    left: -25px;
-    top: 20px;
-}
 
 .quote {
   text-align: center;
@@ -391,9 +372,12 @@ footer > button {
 }
 
 @media screen and (min-width: 1017px) {
+  .bg-green, .bg-blue, .bg-gradient {
+    padding: 0 15px;
+  }
 
   .content-wrap {
-    padding: 60px 100px;
+    padding: 75px 100px;
   }
 
   #intro {
@@ -402,5 +386,63 @@ footer > button {
 
   .conversation-card {
     border-radius: 6px;
+  }
+
+  .pills.-double {
+    background-image: url('../../public/img/pills_6.png');
+    height: 120px;
+    width: 170px;
+    bottom: 100px;
+    left: -20px;
+  }
+
+  .pills.-multiple {
+    height: 300px;
+    width: 250px;
+    right: -20px;
+  }
+
+  .pills.-yellow {
+    height: 200px;
+    width: 100px;
+    top: -30px;
+    left: 100px;
+  }
+  .pills.-purple {
+    height: 125px;
+    width: 140px;
+    right: 0;
+  }
+
+  .quote {
+    position: relative;
+    width: 570px;
+    right: 0;
+    left: 0;
+    margin: 0 30%;
+  }
+
+  .bottle-1 {
+    background-image: url("../../public/img/pills_3.png");
+        width: 155px;
+    height: 227px;
+    left: -30px;
+    top: 86px;
+    z-index: 1;
+  }
+
+  .bottle-2 {
+    background-image: url('../../public/img/pills_4.png');
+          width: 120px;
+    height: 244px;
+    left: 70px;
+    top: 5px
+  }
+  .bottle-3 {
+    background-image: url('../../public/img/pills.png');
+        width: 190px;
+    height: 401px;
+    left: -175px;
+    top: -70px;
   }
 }
