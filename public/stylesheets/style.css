@@ -78,7 +78,9 @@ cite a {
 
 .content-wrap {
   padding: 50px 15px;
-  position: relative; }
+  position: relative;
+  max-width: 1075px;
+  margin: 0 auto; }
 
 .lrg-rl-padding {
   padding-right: 30px;
@@ -125,7 +127,7 @@ header {
   bottom: -45px;
   z-index: 1; }
 
-.intro > p, .narrow-padding > p, .last-child {
+#intro > section > p, .narrow-padding > p, .last-child {
   margin-bottom: 40px; }
 
 .quote-container {
@@ -161,7 +163,9 @@ header {
   width: 100%;
   background-color: white;
   border-radius: 10px;
-  padding: 73px 38px 38px; }
+  padding: 73px 38px 38px;
+  max-width: 700px;
+  margin: 0 auto; }
 
 .icon {
   position: absolute;
@@ -288,3 +292,11 @@ footer > button {
 @media screen and (min-width: 440px) {
   header {
     margin-bottom: 50px; } }
+
+@media screen and (min-width: 1017px) {
+  .content-wrap {
+    padding: 60px 100px; }
+  #intro {
+    border-radius: 6px; }
+  .conversation-card {
+    border-radius: 6px; } }

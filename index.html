@@ -28,8 +28,8 @@
 
 
     <!--INTRO SECTION-->
-      <div class="content-wrap lrg-rl-padding bg-white">
-        <section class="intro">
+      <div class="content-wrap lrg-rl-padding bg-white" id="intro">
+        <section>
           <p class="text -medium -serif">Patients who don’t take medication as prescribed are at risk of worsening health, increased hospitalization, and a greater chance of mortality.</p>
           <p class="text -small">Just in the U.S., non-adherence has been attributed to over $100 billion in avoidable healthcare costs.<cite><a href="">1</a></cite> In developed countries, among patients with chronic illness, approximately 50% do not take medications as prescribed.<cite><a href="">2</a></cite></p>
 
@@ -130,18 +130,20 @@
 
 
     <!--MEET FLO SECTION-->
-    <div class="content-wrap bg-blue">
-      <div class="flo-img"></div>
-      <section class="meet-flo">
-        <div class="centered">
-          <p class="text -x-small -color-white -caps -wide-spacing -bold">The Concept</p>
-          <p class="text -large -serif -color-white">Meet Florence</p>
-        </div>
-        <div class="narrow-padding">
-          <p class="text -small -color-white">Our explorations led to the concept of Florence — a personal companion that would help patients understand and manage their medication regimen. A chatbot at heart, patients would converse with her through text and picture messages.</p>
-          <p class="text -small -color-white">If developed, a simple, familiar interface would hide her powerful intelligence. Behind the scenes, machine learning and behavioral modeling would enable her to offer a tailored, human experience based on each patient’s needs.</p>
-        </div>
-      </section>
+    <div class="bg-blue">
+      <div class="content-wrap">
+        <div class="flo-img"></div>
+        <section class="meet-flo">
+          <div class="centered">
+            <p class="text -x-small -color-white -caps -wide-spacing -bold">The Concept</p>
+            <p class="text -large -serif -color-white">Meet Florence</p>
+          </div>
+          <div class="narrow-padding">
+            <p class="text -small -color-white">Our explorations led to the concept of Florence — a personal companion that would help patients understand and manage their medication regimen. A chatbot at heart, patients would converse with her through text and picture messages.</p>
+            <p class="text -small -color-white">If developed, a simple, familiar interface would hide her powerful intelligence. Behind the scenes, machine learning and behavioral modeling would enable her to offer a tailored, human experience based on each patient’s needs.</p>
+          </div>
+        </section>
+      </div>
     </div>
 
 
@@ -202,107 +204,109 @@
 
 
     <!--BEHIND SCENES SECTION-->
-
-    <div class="content-wrap bg-green">
-      <section class="diagram">
-        <div class="centered">
-          <p class="text -x-small -color-dark -caps -wide-spacing -bold">Behind the Scenes</p>
-          <p class="text -large -serif -color-dark">While Florence is only a concept, here are some things that will be helpful in making her come alive.</p>
-        </div>
-        <div class="flo-diagram">
-          <div class="icon -borders"></div>
-          <!--background-color-->
-          <div class="icon -color">
-            <!--img-->
-            <img class="resize" src="./public/img/icon-knowledge-base.png">
+    <div class="bg-green">
+      <div class="content-wrap">
+        <section class="diagram">
+          <div class="centered">
+            <p class="text -x-small -color-dark -caps -wide-spacing -bold">Behind the Scenes</p>
+            <p class="text -large -serif -color-dark">While Florence is only a concept, here are some things that will be helpful in making her come alive.</p>
           </div>
-        </div>
-        <div class="diagram-details">
-          <div class="diagram-detail">
-            <!--transparent borders-->
+          <div class="flo-diagram">
             <div class="icon -borders"></div>
             <!--background-color-->
             <div class="icon -color">
               <!--img-->
               <img class="resize" src="./public/img/icon-knowledge-base.png">
             </div>
-            <p class="text -small -color-accent -caps -bold centered">Medical Knowledgebase</p>
-            <p class="text -small content">Side effects and drug interactions are currently available in services like Epocrates and Medscape. Though designed for long-form reading, it could be pruned and adapted to fit messaging constraints.</p>
           </div>
-        </div>
-
-        <div class="diagram-details">
-          <div class="diagram-detail">
-            <!--transparent borders-->
-            <div class="icon -borders"></div>
-            <!--background-color-->
-            <div class="icon -color">
-              <!--img-->
-              <img class="resize" src="./public/img/icon-algorithmic.png">
+          <div class="diagram-details">
+            <div class="diagram-detail">
+              <!--transparent borders-->
+              <div class="icon -borders"></div>
+              <!--background-color-->
+              <div class="icon -color">
+                <!--img-->
+                <img class="resize" src="./public/img/icon-knowledge-base.png">
+              </div>
+              <p class="text -small -color-accent -caps -bold centered">Medical Knowledgebase</p>
+              <p class="text -small content">Side effects and drug interactions are currently available in services like Epocrates and Medscape. Though designed for long-form reading, it could be pruned and adapted to fit messaging constraints.</p>
             </div>
-            <p class="text -small -color-accent -caps -bold centered">Algorithmic Content</p>
-            <p class="text -small content">Generating believable messages that don’t feel artificial or templated is key to maintaining the illusion. Tools like Automated Insights Wordsmith hint to possibilities where content can be produced on the fly and personalized to each user.</p>
           </div>
-        </div>
 
-        <div class="diagram-details">
-          <div class="diagram-detail">
-            <!--transparent borders-->
-            <div class="icon -borders"></div>
-            <!--background-color-->
-            <div class="icon -color">
-              <!--img-->
-              <img  class="resize" src="./public/img/icon-processing.png">
+          <div class="diagram-details">
+            <div class="diagram-detail">
+              <!--transparent borders-->
+              <div class="icon -borders"></div>
+              <!--background-color-->
+              <div class="icon -color">
+                <!--img-->
+                <img class="resize" src="./public/img/icon-algorithmic.png">
+              </div>
+              <p class="text -small -color-accent -caps -bold centered">Algorithmic Content</p>
+              <p class="text -small content">Generating believable messages that don’t feel artificial or templated is key to maintaining the illusion. Tools like Automated Insights Wordsmith hint to possibilities where content can be produced on the fly and personalized to each user.</p>
             </div>
-            <p class="text -small -color-accent -caps -bold centered">Natural Language Processing</p>
-            <p class="text -small content">Florence’s conversational style will encourage users to speak to her like a friend. Natural language processing, like those offered by IBM’s Watson, will be needed to extract meaning and respond intelligently.</p>
           </div>
-        </div>
 
-        <div class="diagram-details">
-          <div class="diagram-detail">
-            <!--transparent borders-->
-            <div class="icon -borders"></div>
-            <!--background-color-->
-            <div class="icon -color">
-              <!--img-->
-              <img class="resize" src="./public/img/icon-behavioral.png">
+          <div class="diagram-details">
+            <div class="diagram-detail">
+              <!--transparent borders-->
+              <div class="icon -borders"></div>
+              <!--background-color-->
+              <div class="icon -color">
+                <!--img-->
+                <img  class="resize" src="./public/img/icon-processing.png">
+              </div>
+              <p class="text -small -color-accent -caps -bold centered">Natural Language Processing</p>
+              <p class="text -small content">Florence’s conversational style will encourage users to speak to her like a friend. Natural language processing, like those offered by IBM’s Watson, will be needed to extract meaning and respond intelligently.</p>
             </div>
-            <p class="text -small -color-accent -caps -bold centered">BEHAVIORAL MODELING</p>
-            <p class="text -small content">Florence can generate many different messages which, unchecked, could make her a little too friendly. A system that learns the preferences of users will be helpful in tailoring which kinds of messages are sent, when, and in what frequency.</p>
           </div>
-        </div>
 
-        <div class="diagram-details last-child">
-          <div class="diagram-detail">
-            <!--transparent borders-->
-            <div class="icon -borders"></div>
-            <!--background-color-->
-            <div class="icon -color">
-              <!--img-->
-              <img class="resize" src="./public/img/icon-integration.png">
+          <div class="diagram-details">
+            <div class="diagram-detail">
+              <!--transparent borders-->
+              <div class="icon -borders"></div>
+              <!--background-color-->
+              <div class="icon -color">
+                <!--img-->
+                <img class="resize" src="./public/img/icon-behavioral.png">
+              </div>
+              <p class="text -small -color-accent -caps -bold centered">BEHAVIORAL MODELING</p>
+              <p class="text -small content">Florence can generate many different messages which, unchecked, could make her a little too friendly. A system that learns the preferences of users will be helpful in tailoring which kinds of messages are sent, when, and in what frequency.</p>
             </div>
-            <p class="text -small -color-accent -caps -bold centered">IOT INTEGRATIONS</p>
-            <p class="text -small content">The emergence of connected adherence devices like Proteus pills and Smrxt bottles, combined with the popularity of health devices like Fitbits and Qardio, can provide a more rounded view of patients. Aggregating and synthesizing that information, perhaps using services like Validic, would help Florence interact more appropriately.</p>
           </div>
-        </div>
-      </section>
+
+          <div class="diagram-details last-child">
+            <div class="diagram-detail">
+              <!--transparent borders-->
+              <div class="icon -borders"></div>
+              <!--background-color-->
+              <div class="icon -color">
+                <!--img-->
+                <img class="resize" src="./public/img/icon-integration.png">
+              </div>
+              <p class="text -small -color-accent -caps -bold centered">IOT INTEGRATIONS</p>
+              <p class="text -small content">The emergence of connected adherence devices like Proteus pills and Smrxt bottles, combined with the popularity of health devices like Fitbits and Qardio, can provide a more rounded view of patients. Aggregating and synthesizing that information, perhaps using services like Validic, would help Florence interact more appropriately.</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
-
     <!--FOOTER SECTION-->
-    <div class="content-wrap bg-blue">
-      <footer>
-        <div class="centered">
-          <p class="text -x-small -color-white -caps -wide-spacing -bold">An Exploration by Viget</p>
-        </div>
-        <div class="narrow-padding">
-          <p class="text -small -color-white -serif centered">At Viget, we’re continually thinking about how we can help shape and improve the experiences around us and make the world a better place — whether that’s through the technology solutions we deliver to our clients or through conceptual explorations like Florence.</p>
-        </div>
-        <button class="text -caps -bold -small">Contact Us</button>
-        <div class="footer-flo-img -bg"></div>
-        <div class="footer-flo-img"></div>
-      </footer>
+    <div class="bg-blue">
+      <div class="content-wrap">
+        <footer>
+          <div class="centered">
+            <p class="text -x-small -color-white -caps -wide-spacing -bold">An Exploration by Viget</p>
+          </div>
+          <div class="narrow-padding">
+            <p class="text -small -color-white -serif centered">At Viget, we’re continually thinking about how we can help shape and improve the experiences around us and make the world a better place — whether that’s through the technology solutions we deliver to our clients or through conceptual explorations like Florence.</p>
+          </div>
+          <button class="text -caps -bold -small">Contact Us</button>
+          <div class="footer-flo-img -bg"></div>
+          <div class="footer-flo-img"></div>
+        </footer>
+      </div>
     </div>
 
   </div>
