@@ -376,6 +376,7 @@ footer > button {
 .about-flo > .-chat {
   display: flex;
   flex-direction: column;
+  margin-left: 50px;
 }
 //FLO AVATAR
 .bubble.bot-avatar::before {
@@ -386,7 +387,7 @@ footer > button {
   left: -50px;
   position: absolute;
   bottom: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 //GRAY ARROW
@@ -397,7 +398,6 @@ footer > button {
   height: 10px;
   width: 20px;
   background-color: #e2ebe9;
-  z-index: -1;
   bottom: 7px;
 }
 
@@ -411,10 +411,9 @@ footer > button {
 }
 
 //WHITE CIRCLE TO COVER GRAY ARROW
-.bot-avatar,
-.bubble.-response {
-
-  p::after {
+.bot-avatar > .spinner::after,
+.bot-avatar > p::after,
+.bubble.-response > p::after {
     content: '';
     position: absolute;
     bottom: 8px;
@@ -422,12 +421,11 @@ footer > button {
     width: 20px;
     background-color: white;
     border-radius: 100px;
-  }
+    z-index: 1;
+
 }
-.bot-avatar {
-  p::after {
+.bot-avatar > .spinner::after, .bot-avatar > p::after, {
     left: -20px;
-  }
 }
 
 .bubble.-response {
@@ -437,20 +435,101 @@ footer > button {
   }
 }
 
+//CHAT BUBBLES && SPINNER
+@keyframes appear-text {
+  0% {
+    opacity: 1;
+    top: -10px;
+    transform: translateY(20px) translateX(-100px) scale(0.5)
+  }
+  50% {
+    top: 3px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+    transform: translateY(0px) translateX(0px) scale(1)
+  }
+}
+
+@keyframes appear-text-right {
+  0% {
+    opacity: 1;
+    top: -10px;
+    transform: translateY(20px) translateX(30px) scale(0.5)
+  }
+  50% {
+    top: 3px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+    transform: translateY(0px) translateX(0px) scale(1)
+  }
+}
+
+.bubble.finished > .spinner {
+  visibility: hidden;
+}
+.bubble.finished > p {
+  opacity: 1;
+}
+
+ .bubble.-response.finished {
+    animation-name: appear-text-right;
+  }
+
 .bubble {
   position: relative;
   margin-bottom: 7px;
+  animation: appear-text 0.2s ease-out forwards paused;
+  opacity: 0;
 
-  p {
+
+  p, .spinner {
     line-height: 1.375;
     color: #252224;
     display: inline-block;
     border-radius: 15px;
     background-color: #e2ebe9;
     padding: 12px;
-    margin: 0
+    margin: 0;
+  }
+  p {
+    opacity: 0;
+  }
+
+  .spinner {
+    position: absolute
+  }
+
+  .spinner > span {
+    width: 8px;
+    height: 8px;
+    background: #514D4C;
+    display: inline-block;
+    border-radius: 100px;
+    animation: typing-dots 1s ease-in infinite;
+  }
+
+  .spinner > span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .spinner > span:nth-child(3) {
+    animation-delay: 0.4s
   }
 }
+
+@keyframes typing-dots {
+  0% {
+    background: #cacaca
+  }
+  60% {
+    background: #514D4C
+  }
+}
+
+
 .bubble.-response {
   align-self: flex-end;
 
@@ -479,7 +558,7 @@ footer > button {
     }
     .-content {
       width: 60%;
-      margin-right: 100px;
+      margin-right: 50px;
 
       .centered {
         text-align: left
