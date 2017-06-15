@@ -97,7 +97,7 @@ header {
   width: 100%;
   margin: 17px auto 0; }
 
-.pills, .anatomy, .flo-img, .flo-diagram, .about-flo-icon, .footer-flo-img, .question > .phone {
+.pills, .anatomy, .flo-img, .flo-diagram, .about-flo-icon, .footer-flo-img, .phone {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute; }
@@ -180,8 +180,7 @@ header {
 
 .question {
   padding-top: 75px;
-  padding-bottom: 140px;
-  position: relative; }
+  padding-bottom: 140px; }
 
 .meet-flo {
   padding-top: 145px; }
@@ -334,7 +333,7 @@ footer > button {
     background-image: url("../../public/img/phone.png");
     width: 270px;
     height: 445px;
-    right: -150px;
-    top: 230px; }
-  .question > .narrow-padding {
-    width: 700px; } }
+    right: -300px; }
+  .question-content {
+    width: 680px;
+    position: relative; } }
