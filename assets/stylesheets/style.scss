@@ -170,6 +170,7 @@ header {
 
 #intro > section > p,
 .narrow-padding > p,
+.narrow-padding > div > p,
 .diagram-details:nth-child(5) {
   margin-bottom: 40px
 }
@@ -260,8 +261,8 @@ header {
 
 .flo-img {
   background-image: url("../../public/img/florence_2.png");
-  width: 270px;
-  height: 300px;
+  width: 282px;
+  height: 305px;
   top: -140px;
   right: 0;
   margin: 0 auto;
@@ -273,6 +274,11 @@ header {
 .conversation-card {
   background-color: white;
   margin-bottom: 100px;
+}
+
+.about-flo {
+  display: flex;
+  flex-direction: column;
 }
 
 .about-flo-icon {
@@ -366,6 +372,93 @@ footer > button {
     bottom: -105px;
 }
 
+//ANIMATE CONVERSATION
+.about-flo > .-chat {
+  display: flex;
+  flex-direction: column;
+}
+//FLO AVATAR
+.bubble.bot-avatar::before {
+  content: url('../../public/img/avatar_2.png');
+  background-color: #f2c84d;
+  border-radius: 300px;
+  padding: 4px 6px 0 5px;
+  left: -50px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+//GRAY ARROW
+.bubble.bot-avatar::after,
+.bubble.-response::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 20px;
+  background-color: #e2ebe9;
+  z-index: -1;
+  bottom: 7px;
+}
+
+.bubble.bot-avatar::after {
+  left: -10px;
+}
+
+.bubble.-response::after {
+  background-color: #1793ad;
+  right: -8px;
+}
+
+//WHITE CIRCLE TO COVER GRAY ARROW
+.bot-avatar,
+.bubble.-response {
+
+  p::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 100px;
+  }
+}
+.bot-avatar {
+  p::after {
+    left: -20px;
+  }
+}
+
+.bubble.-response {
+  p::after {
+    right: -20px;
+    bottom: 7px;
+  }
+}
+
+.bubble {
+  position: relative;
+  margin-bottom: 7px;
+
+  p {
+    line-height: 1.375;
+    color: #252224;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #e2ebe9;
+    padding: 12px;
+    margin: 0
+  }
+}
+.bubble.-response {
+  align-self: flex-end;
+
+  p {
+    background-color: #1793ad;
+    color: white
+  }
+}
 
 @media screen and (min-width: 440px) {
 
@@ -375,6 +468,75 @@ footer > button {
 }
 
 @media screen and (min-width: 1017px) {
+  .about-flo {
+    flex-direction: row;
+
+    .-content, .-chat  {
+      z-index: 1;
+    }
+    .-chat  {
+      width: 40%;
+    }
+    .-content {
+      width: 60%;
+      margin-right: 100px;
+
+      .centered {
+        text-align: left
+      }
+    }
+  }
+  .about-flo-icon {
+    margin: 0;
+
+  }
+  .conversation-card.-cup > .about-flo-icon {
+    width: 160px;
+    height: 171px;
+    bottom: -22px;
+    top: inherit;
+    left: 210px;
+  }
+  .conversation-card.-pills > .about-flo-icon {
+    width: 100px;
+    height: 138px;
+    bottom: -40px;
+    top: inherit;
+    left: 210px;
+  }
+  .conversation-card.-temp > .about-flo-icon {
+    width: 103px;
+    height: 146px;
+    left: 408px;
+    top: -30px;
+  }
+  .conversation-card.-box > .about-flo-icon {
+    width: 408px;
+    height: 141px;
+    left: 121px;
+  }
+
+  .conversation-card.-money {
+    margin-bottom: 100px
+  }
+  .conversation-card.-money > .about-flo-icon {
+    width: 159px;
+    height: 200px;
+    top: -103px;
+    left: 219px;
+  }
+  .conversation-card.-cheer > .about-flo-icon {
+    width: 203px;
+    top: inherit;
+    height: 105px;
+    bottom: 0;
+    left: 194px;
+  }
+
+  .meet-flo > div > .-large {
+    font-size: 60px
+  }
+
   .bg-green, .bg-blue, .bg-gradient {
     padding: 0 15px;
   }
