@@ -124,7 +124,9 @@ header {
   bottom: -45px;
   z-index: 1; }
 
-#intro > section > p, .narrow-padding > p, .last-child {
+#intro > section > p,
+.narrow-padding > p,
+.diagram-details:nth-child(5) {
   margin-bottom: 40px; }
 
 .quote-container {
@@ -135,6 +137,7 @@ header {
   text-align: center; }
 
 .diagram {
+  position: relative;
   padding-top: 25px; }
 
 .diagram-details {
@@ -333,7 +336,63 @@ footer > button {
     background-image: url("../../public/img/phone.png");
     width: 270px;
     height: 445px;
-    right: -300px; }
-  .question-content {
-    width: 680px;
+    right: -280px; }
+  .question > .narrow-padding {
+    width: 730px;
     position: relative; } }
+
+@media screen and (min-width: 1200px) {
+  .flo-diagram {
+    width: 389px;
+    height: 641px;
+    margin-top: 100px;
+    margin-bottom: 150px; }
+  .diagram-details:nth-child(1) {
+    top: 120px; }
+  .diagram-details:nth-child(2) {
+    top: 368px; }
+  .diagram-details:nth-child(3) {
+    top: 640px; }
+  .diagram-details:nth-child(4) {
+    top: 200px; }
+  .diagram-details:nth-child(5) {
+    top: 500px; }
+  .diagram-details__group .diagram-details {
+    position: absolute;
+    left: -150px; }
+  .diagram-details__group .diagram-detail {
+    width: 494px;
+    padding: 40px 60px 30px 25px;
+    text-align: right;
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
+    margin: 0; }
+    .diagram-details__group .diagram-detail .centered {
+      text-align: right; }
+    .diagram-details__group .diagram-detail .content {
+      font-size: 16px; }
+  .diagram-details__group .icon {
+    left: inherit;
+    bottom: 0;
+    margin: auto; }
+  .diagram-details__group .icon.-color {
+    top: 0;
+    right: -33px; }
+  .diagram-details__group .icon.-borders {
+    top: 0;
+    right: -43px; }
+  .diagram-details__group .reverse {
+    right: -150px;
+    left: inherit; }
+    .diagram-details__group .reverse .diagram-detail {
+      border-radius: 70px 10px 10px 70px;
+      padding: 40px 25px 30px 60px;
+      text-align: left; }
+      .diagram-details__group .reverse .diagram-detail .centered {
+        text-align: left; }
+      .diagram-details__group .reverse .diagram-detail .icon.-color {
+        left: -33px;
+        right: inherit; }
+      .diagram-details__group .reverse .diagram-detail .icon.-borders {
+        left: -43px;
+        right: inherit; } }

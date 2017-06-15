@@ -168,7 +168,9 @@ header {
 
 //INTRO SECTION
 
-#intro > section > p, .narrow-padding > p, .last-child {
+#intro > section > p,
+.narrow-padding > p,
+.diagram-details:nth-child(5) {
   margin-bottom: 40px
 }
 
@@ -187,6 +189,7 @@ header {
 //DIAGRAM SECTION
 
 .diagram {
+  position: relative;
   padding-top: 25px;
 }
 
@@ -450,10 +453,97 @@ footer > button {
     background-image: url('../../public/img/phone.png');
     width: 270px;
     height: 445px;
-    right: -300px;
+    right: -280px;
   }
-  .question-content {
-    width: 680px;
+  .question > .narrow-padding {
+    width: 730px;
     position: relative
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .flo-diagram {
+    width: 389px;
+    height: 641px;
+    margin-top: 100px;
+    margin-bottom: 150px
+  }
+  .diagram-details:nth-child(1) {
+    top: 120px
+  }
+  .diagram-details:nth-child(2) {
+    top: 368px
+  }
+  .diagram-details:nth-child(3) {
+    top: 640px
+  }
+  .diagram-details:nth-child(4) {
+    top: 200px
+  }
+  .diagram-details:nth-child(5) {
+    top: 500px
+  }
+  .diagram-details__group {
+    .diagram-details {
+      position: absolute;
+      left: -150px;
+    }
+    .diagram-detail {
+      width: 494px;
+      padding: 40px 60px 30px 25px;
+      text-align: right;
+      border-top-right-radius: 70px;
+      border-bottom-right-radius: 70px;
+      margin: 0;
+
+      .centered {
+        text-align: right
+      }
+      .content {
+        font-size: 16px;
+      }
+    }
+
+    .icon {
+      left: inherit;
+      bottom: 0;
+      margin: auto;
+    }
+    .icon.-color {
+      top: 0;
+      right: -33px;
+    }
+    .icon.-borders {
+      top: 0;
+      right: -43px;
+    }
+    .reverse {
+      right: -150px;
+      left: inherit;
+
+      .diagram-detail {
+        border-radius: 70px 10px 10px 70px;
+        padding: 40px 25px 30px 60px;
+        text-align: left;
+
+        .centered {
+          text-align: left;
+        }
+        .icon.-color {
+          left: -33px;
+          right: inherit;
+        }
+        .icon.-borders {
+          left: -43px;
+          right: inherit;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
 }
