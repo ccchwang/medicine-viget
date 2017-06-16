@@ -284,6 +284,19 @@ footer > button {
   flex-direction: column;
   margin-left: 50px; }
 
+.-pills > .narrow-padding > .-chat .bubble:nth-child(1) > .spinner {
+  top: 19px; }
+
+.-pills > .narrow-padding > .-chat .bubble:nth-child(2) > .spinner {
+  top: 38px; }
+
+.-pills > .narrow-padding > .-chat .bubble:nth-child(4) > .spinner {
+  top: 76px; }
+
+.-temp > .narrow-padding > .-chat .bubble:nth-child(1) > .spinner,
+.-temp > .narrow-padding > .-chat .bubble:nth-child(3) > .spinner {
+  top: 19px; }
+
 .bubble.bot-avatar::before {
   content: url("../../public/img/avatar_2.png");
   background-color: #f2c84d;
@@ -331,7 +344,6 @@ footer > button {
 
 @keyframes appear-text {
   0% {
-    opacity: 1;
     top: -10px;
     transform: translateY(20px) translateX(-100px) scale(0.5); }
   50% {
@@ -343,7 +355,6 @@ footer > button {
 
 @keyframes appear-text-right {
   0% {
-    opacity: 1;
     top: -10px;
     transform: translateY(20px) translateX(30px) scale(0.5); }
   50% {
@@ -353,19 +364,20 @@ footer > button {
     top: 0px;
     transform: translateY(0px) translateX(0px) scale(1); } }
 
-.bubble.finished > .spinner {
+.bubble.flo > p {
+  opacity: 0; }
+
+.bubble.flo.finished .spinner {
   visibility: hidden; }
 
-.bubble.finished > p {
+.bubble.flo.finished p {
   opacity: 1; }
-
-.bubble.-response.finished {
-  animation-name: appear-text-right; }
 
 .bubble {
   position: relative;
   margin-bottom: 7px;
   animation: appear-text 0.2s ease-out forwards paused;
+  animation-iteration-count: 1;
   opacity: 0; }
   .bubble p, .bubble .spinner {
     line-height: 1.375;
@@ -375,8 +387,6 @@ footer > button {
     background-color: #e2ebe9;
     padding: 12px;
     margin: 0; }
-  .bubble p {
-    opacity: 0; }
   .bubble .spinner {
     position: absolute; }
   .bubble .spinner > span {
@@ -390,6 +400,9 @@ footer > button {
     animation-delay: 0.2s; }
   .bubble .spinner > span:nth-child(3) {
     animation-delay: 0.4s; }
+
+.bubble.-response {
+  animation-name: appear-text-right; }
 
 @keyframes typing-dots {
   0% {
@@ -409,7 +422,8 @@ footer > button {
 
 @media screen and (min-width: 1017px) {
   .about-flo {
-    flex-direction: row; }
+    flex-direction: row;
+    align-items: center; }
     .about-flo .-content, .about-flo .-chat {
       z-index: 1; }
     .about-flo .-chat {
@@ -420,7 +434,13 @@ footer > button {
       .about-flo .-content .centered {
         text-align: left; }
   .about-flo-icon {
-    margin: 0; }
+    margin: 0;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1s ease-in-out; }
+  .about-flo-icon.animate {
+    transform: translateY(0px);
+    opacity: 1; }
   .conversation-card.-cup > .about-flo-icon {
     width: 160px;
     height: 171px;

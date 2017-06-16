@@ -1,19 +1,36 @@
 window.onload = function() {
-  let chatList = document.getElementsByClassName('bubble')
+  let convoCards = document.getElementsByClassName('conversation-card')
 
-  Array.prototype.slice.call(chatList).forEach(text => {
+  Array.prototype.slice.call(convoCards).forEach(convo => {
+    let objectBottom = (convo.offsetHeight + convo.offsetTop) / 1.04;
 
-    text.style.animationDelay = `${text.dataset.delay}ms`;
-    text.style.animationPlayState = 'running';
-    text.className += " finished";
+    window.addEventListener('scroll', function(){
+      let windowBottom = window.innerHeight + window.scrollY;
+
+      if (windowBottom > objectBottom && !convo.className.includes('finished')) {
+        convo.className += " current finished";
+
+        let chatList = document.querySelectorAll(`.current > .narrow-padding > .-chat > .bubble`);
+
+        document.querySelector(`.current > .about-flo-icon`).className += " animate";
 
 
-    if (!text.className.includes('-response')) {
-      Array.prototype.slice.call(text.children).forEach(child => {
-        child.style.transitionDelay = `${1000 + Number(text.dataset.delay)}ms`;
-      })
-    }
+        Array.prototype.slice.call(chatList).forEach(text => {
+          text.style.animationDelay = `${text.dataset.delay}ms`;
+          text.style.animationPlayState = 'running';
+
+          setTimeout(function(){
+            text.className += " finished";
+          }, `${1000 + Number(text.dataset.delay)}`)
+        })
+
+        convo.classList.remove("current");
+      }
+    })
 
   })
+
+
+
 }
 

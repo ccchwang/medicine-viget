@@ -161,7 +161,7 @@
             <p class="text -small -serif">This conversation, which unfolds over time, feels less like twenty questions and more like the start of a relationship.</p>
           </div>
           <div class="-chat">
-            <div class="bubble bot-avatar" data-delay="0">
+            <div class="bubble bot-avatar flo" data-delay="0">
               <div class="spinner">
                 <span></span>
                 <span></span>
@@ -169,10 +169,10 @@
               </div>
               <p>Hi! I'm Florence. What's your name?</p>
             </div>
-            <div class="bubble -response" data-delay="1800">
+            <div class="bubble -response" data-delay="2000">
               <p>Mike</p>
             </div>
-            <div class="bubble" data-delay="2700">
+            <div class="bubble flo" data-delay="2900">
               <div class="spinner">
                 <span></span>
                 <span></span>
@@ -180,7 +180,7 @@
               </div>
               <p>Nice to meet you, Mike. I can help you set up your account with a few simple questions.</p>
             </div>
-            <div class="bubble" data-delay="4800">
+            <div class="bubble flo" data-delay="4900">
               <div class="spinner">
                 <span></span>
                 <span></span>
@@ -188,7 +188,7 @@
               </div>
               <p>You can answer these now or whenever you like. I'm always here!</p>
             </div>
-            <div class="bubble bot-avatar" data-delay="6500">
+            <div class="bubble bot-avatar flo" data-delay="6700">
               <div class="spinner">
                 <span></span>
                 <span></span>
@@ -196,23 +196,81 @@
               </div>
               <p>First question: how old are you?</p>
             </div>
-            <div class="bubble -response"  data-delay="8500">
+            <div class="bubble -response" data-delay="8700">
               <p>65</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!---->
+
       <section class="conversation-card content-wrap -pills">
         <div class="about-flo-icon"></div>
         <div class="narrow-padding about-flo">
           <div class="-content">
-            <p class="text -medium -color-lightblue -caps -bold centered">She keeps track of your regimen</p>
+            <p class="text -medium -color-lightblue -caps -bold centered">SHE KEEPS TRACK OF YOUR REGIMEN.</p>
+            <p class="text -small -serif">Florence strikes up a conversation, learning details about your life, health, goals, and preferences in an engaging, human way.</p>
             <p class="text -small -serif">Florence helps you remember what to take and when. Image recognition makes adding your medication as easy as taking a picture.</p>
           </div>
-          <div></div>
+          <div class="-chat">
+            <div class="bubble flo" data-delay="0">
+              <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>Let’s get started adding your medications.</p>
+            </div>
+            <div class="bubble bot-avatar flo" data-delay="2000">
+              <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>Message me a picture of the bottle label and I’ll add it. You can also type in the name if you want.</p>
+            </div>
+            <div class="bubble -response" data-delay="4000">
+              <p><img src="./public/img/sample-photo.jpg"></p>
+            </div>
+            <div class="bubble flo" data-delay="5700">
+              <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>Here’s what I got:
+                <br>• Coumadin 5mg
+                <br>• Take one tablet daily
+                <br>• Prescribed by Dr. Ruth Parker
+                <br>• Pharmacy: Rite Aid #25335
+                <br>
+              </p>
+            </div>
+            <div class="bubble bot-avatar flo" data-delay="7500">
+              <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>Is that right?</p>
+            </div>
+            <div class="bubble -response" data-delay="9600">
+              <p>Yep</p>
+            </div>
+            <div class="bubble bot-avatar flo" data-delay="10800">
+              <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>Ok, added</p>
+            </div>
+          </div>
         </div>
       </section>
+
+      <!---->
 
       <section class="conversation-card content-wrap -temp">
         <div class="about-flo-icon"></div>
@@ -222,7 +280,35 @@
             <p class="text -small -serif">As you start taking new medications, Florence will follow up to see if you’re experiencing side effects.</p>
             <p class="text -small -serif">She can offer additional information to help you understand if your experience is typical — or if you should talk with your doctor.</p>
           </div>
-          <div></div>
+          <div class="-chat">
+            <div class="bubble bot-avatar flo" data-delay="0">
+              <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>It’s been three days since you started taking Lisinopril. How’re you feeling?</p>
+            </div>
+            <div class="bubble -response" data-delay="2000">
+              <p>a little weak and lightheaded</p>
+            </div>
+            <div class="bubble flo" data-delay="3800">
+              <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>Feeling lightheaded is a common side effect of Lisinopril. But you should let Dr. Ruth Parker know as soon as possible</p>
+            </div>
+            <div class="bubble bot-avatar flo" data-delay="5700">
+              <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>Here’s her number: (919) 545-2020</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -234,7 +320,24 @@
             <p class="text -medium -color-lightblue -caps -bold centered">She helps you remember</p>
             <p class="text -small -serif">With complex regimens, days often blur together. Florence will show you what you’ve taken today — and what’s left to take.</p>
           </div>
-          <div></div>
+          <!--<div class="-chat">
+            <div class="bubble bot-avatar flo" data-delay="0">
+              <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>It’s been three days since you started taking Lisinopril. How’re you feeling?</p>
+            </div>
+            <div class="bubble -response" data-delay="2000">
+              <div class="spinner">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>a little weak and lightheaded</p>
+            </div>
+          </div>-->
         </div>
       </section>
 
