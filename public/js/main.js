@@ -2,9 +2,10 @@ window.onload = function() {
   let convoCards = document.getElementsByClassName('conversation-card')
 
   Array.prototype.slice.call(convoCards).forEach(convo => {
-    let objectBottom = (convo.offsetHeight + convo.offsetTop) / 1.04;
+
 
     window.addEventListener('scroll', function(){
+      let objectBottom = (convo.offsetHeight + convo.offsetTop) / 1.03;
       let windowBottom = window.innerHeight + window.scrollY;
 
       if (windowBottom > objectBottom && !convo.className.includes('finished')) {

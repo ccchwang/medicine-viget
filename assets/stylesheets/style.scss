@@ -134,7 +134,7 @@ header {
   margin: 17px auto 0;
 }
 
-.pills, .anatomy, .flo-img, .flo-diagram, .about-flo-icon, .footer-flo-img, .phone {
+.pills, .anatomy, .flo-img, .flo-diagram, .about-flo-icon, .about-flo-icon__bg, .footer-flo-img, .phone {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute
@@ -274,6 +274,11 @@ header {
 .conversation-card {
   background-color: white;
   margin-bottom: 100px;
+
+  .narrow-padding {
+    z-index: 1;
+    position: relative;
+  }
 }
 
 .about-flo {
@@ -290,42 +295,94 @@ header {
   margin: 0 auto;
 }
 
-.conversation-card.-cup > .about-flo-icon {
-  background-image: url('../../public/img/section-1-illo.png');
+.about-flo-icon__bg {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
 }
 
-.conversation-card.-pills > .about-flo-icon {
-  background-image: url('../../public/img/pills_3.png');
-  width: 80px;
+.conversation-card.-cup {
+  .about-flo-icon {
+    background-image: url('../../public/img/section-1-illo.png');
+  }
+  .about-flo-icon__bg {
+    background-image: url('../../public/img/section-1-illo-background.jpg');
+    width: 312px;
+    height: 126px;
+    transform: rotate(180deg);
+  }
 }
 
-.conversation-card.-temp > .about-flo-icon {
-  background-image: url('../../public/img/section-3-illo.png');
-  width: 80px;
+.conversation-card.-pills {
+  .about-flo-icon {
+    background-image: url('../../public/img/pills_3.png');
+    width: 80px;
+  }
+  .about-flo-icon__bg {
+    background-image: url('../../public/img/section-2-illo-background.jpg');
+    width: 330px;
+    height: 186px;
+    transform: rotate(180deg);
+  }
 }
 
-.conversation-card.-box > .about-flo-icon{
-  background-image: url('../../public/img/section-4-illo.png');
-  width: 260px;
-    top: -40px;
+.conversation-card.-temp {
+  .about-flo-icon {
+    background-image: url('../../public/img/section-3-illo.png');
+    width: 80px;
+  }
+  .about-flo-icon__bg {
+    background-image: url('../../public/img/section-3-illo-background.jpg');
+    width: 402px;
+    height: 166px;
+  }
 }
 
-.conversation-card.-money > .about-flo-icon {
-  background-image: url('../../public/img/section-5-illo.png');
+
+.conversation-card.-box {
+  .about-flo-icon{
+    background-image: url('../../public/img/section-4-illo.png');
+    width: 260px;
+      top: -40px;
+  }
+  .about-flo-icon__bg {
+    background-image: url('../../public/img/section-4-illo-background.jpg');
+    width: 558px;
+    height: 221px;
+  }
 }
 
 .conversation-card.-money {
-  margin-bottom: 140px
+  margin-bottom: 140px;
+
+  .about-flo-icon {
+    background-image: url('../../public/img/section-5-illo.png');
+  }
+  .about-flo-icon__bg {
+      background-image: url('../../public/img/section-5-illo-background.jpg');
+      width: 536px;
+      height: 187px;
+    }
 }
+
+
+
 
 .conversation-card.-cheer {
-  margin-bottom: 0px
-}
+  margin-bottom: 0px;
 
-.conversation-card.-cheer > .about-flo-icon {
-  background-image: url('../../public/img/section-6-illo.png');
-  width: 195px;
+  .about-flo-icon {
+    background-image: url('../../public/img/section-6-illo.png');
+    width: 195px;
     top: -100px;
+  }
+  .about-flo-icon__bg {
+    background-image: url('../../public/img/section-6-illo-background.jpg');
+    width: 396px;
+    height: 216px;
+    transform: rotate(180deg);
+  }
 }
 
 //BEHIND THE SCENES SECTION
@@ -380,24 +437,7 @@ footer > button {
 }
 
 
-.-pills > .narrow-padding > .-chat {
-  .bubble:nth-child(1) > .spinner {
-    top: 19px;
-  }
-  .bubble:nth-child(2) > .spinner {
-    top: 38px;
-  }
-  .bubble:nth-child(4) > .spinner {
-    top: 76px;
-  }
-}
 
-.-temp > .narrow-padding > .-chat {
-  .bubble:nth-child(1) > .spinner,
-  .bubble:nth-child(3) > .spinner {
-    top: 19px;
-  }
-}
 
 
 //FLO AVATAR
@@ -461,7 +501,7 @@ footer > button {
 @keyframes appear-text {
   0% {
     top: -10px;
-    transform: translateY(20px) translateX(-100px) scale(0.5)
+    transform: translateY(20px) translateX(-30px) scale(0.5)
   }
   50% {
     top: 3px;
@@ -509,6 +549,7 @@ footer > button {
   margin-bottom: 7px;
   animation: appear-text 0.2s ease-out forwards paused;
   animation-iteration-count: 1;
+  transform-origin: left bottom;
   opacity: 0;
 
 
@@ -523,7 +564,8 @@ footer > button {
   }
 
   .spinner {
-    position: absolute
+    position: absolute;
+    bottom: 0
   }
 
   .spinner > span {
@@ -545,6 +587,7 @@ footer > button {
 
 .bubble.-response {
   animation-name: appear-text-right;
+  transform-origin: right bottom;
 }
 
 @keyframes typing-dots {
@@ -597,55 +640,108 @@ footer > button {
   }
   .about-flo-icon {
     margin: 0;
-    transform: translateY(50px);
     opacity: 0;
-    transition: 1s ease-in-out
-  }
-  .about-flo-icon.animate {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  .conversation-card.-cup > .about-flo-icon {
-    width: 160px;
-    height: 171px;
-    bottom: -22px;
-    top: inherit;
-    left: 210px;
-  }
-  .conversation-card.-pills > .about-flo-icon {
-    width: 100px;
-    height: 138px;
-    bottom: -40px;
-    top: inherit;
-    left: 210px;
-  }
-  .conversation-card.-temp > .about-flo-icon {
-    width: 103px;
-    height: 146px;
-    left: 408px;
-    top: -30px;
-  }
-  .conversation-card.-box > .about-flo-icon {
-    width: 408px;
-    height: 141px;
-    left: 121px;
   }
 
+  .conversation-card:nth-child(1) > .about-flo-icon,
+  .conversation-card:nth-child(2) > .about-flo-icon,
+  .conversation-card:nth-child(6) > .about-flo-icon {
+    transform: translateY(50px);
+  }
+  .conversation-card:nth-child(3) > .about-flo-icon,
+  .conversation-card:nth-child(4) > .about-flo-icon,
+  .conversation-card:nth-child(5) > .about-flo-icon {
+    transform: translateY(-50px);
+  }
+  .about-flo-icon.animate {
+    transform: translateY(0px) !important;
+    opacity: 1;
+    transition: 1s transform ease-in-out, 1s opacity ease-in-out
+  }
+  .about-flo-icon__bg {
+    margin: initial
+  }
+
+  .conversation-card.-cup {
+    .about-flo-icon {
+      width: 160px;
+      height: 171px;
+      bottom: -22px;
+      top: inherit;
+      left: 210px;
+    }
+    .about-flo-icon__bg {
+      bottom: 0;
+      left: 125px;
+      top: inherit;
+      transform: rotate(0deg);
+    }
+  }
+  .conversation-card.-pills {
+    .about-flo-icon {
+      width: 130px;
+      height: 198px;
+      bottom: -40px;
+      top: inherit;
+      left: 210px;
+    }
+    .about-flo-icon__bg {
+      bottom: 0;
+      left: 105px;
+      top: inherit;
+      transform: rotate(0deg);
+    }
+  }
+  .conversation-card.-temp {
+    .about-flo-icon {
+      width: 103px;
+      height: 146px;
+      left: 408px;
+      top: -30px;
+    }
+    .about-flo-icon__bg {
+      left: 250px;
+    }
+  }
+  .conversation-card.-box {
+    .about-flo-icon {
+      width: 408px;
+      height: 141px;
+      left: 121px;
+    }
+    .about-flo-icon__bg {
+      left: 20px;
+    }
+  }
+
+
   .conversation-card.-money {
-    margin-bottom: 100px
+    margin-bottom: 100px;
+
+    .about-flo-icon {
+      width: 159px;
+      height: 200px;
+      top: -83px;
+      left: 219px;
+    }
+    .about-flo-icon__bg {
+      left: 20px;
+    }
   }
-  .conversation-card.-money > .about-flo-icon {
-    width: 159px;
-    height: 200px;
-    top: -103px;
-    left: 219px;
-  }
-  .conversation-card.-cheer > .about-flo-icon {
-    width: 203px;
-    top: inherit;
-    height: 105px;
-    bottom: 0;
-    left: 194px;
+  .conversation-card.-cheer {
+    .about-flo-icon {
+      width: 203px;
+      top: inherit;
+      height: 105px;
+      bottom: 0;
+      left: 194px;
+    }
+    .about-flo-icon__bg {
+      left: 105px;
+      bottom: 0;
+      top: inherit;
+      transform: rotate(0deg);
+    }
   }
 
   .meet-flo > div > .-large {
