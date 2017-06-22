@@ -1,4 +1,4 @@
-//Animating chat bubbles on conversation cards:
+//**Animating chat bubbles on conversation cards:
 
 window.onload = function() {
   //find all convo cards and loop through them
