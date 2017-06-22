@@ -100,6 +100,7 @@ cite a{
   background: linear-gradient(#184d66, #d2e7e2);
 }
 
+//PADDING
 
 .content-wrap {
   padding: 50px 15px;
@@ -436,10 +437,6 @@ footer > button {
   margin-left: 50px;
 }
 
-
-
-
-
 //FLO AVATAR
 .bubble.bot-avatar::before {
   content: url('../../public/img/avatar_2.png');
@@ -633,11 +630,11 @@ footer > button {
 
 
 @media screen and (min-width: 440px) {
-
   header {
     margin-bottom: 50px;
   }
 }
+
 
 @media screen and (min-width: 1017px) {
   .about-flo {
@@ -836,6 +833,7 @@ footer > button {
     left: 70px;
     top: 5px
   }
+
   .bottle-3 {
     background-image: url('../../public/img/pills.png');
         width: 190px;
@@ -843,12 +841,14 @@ footer > button {
     left: -175px;
     top: -70px;
   }
+
   .phone {
     background-image: url('../../public/img/phone.png');
     width: 270px;
     height: 445px;
     right: -280px;
   }
+
   .question > .narrow-padding {
     width: 730px;
     position: relative
@@ -877,6 +877,7 @@ footer > button {
   .diagram-details:nth-child(5) {
     top: 500px
   }
+
   .diagram-details__group {
     .diagram-details {
       position: absolute;
@@ -934,6 +935,7 @@ footer > button {
       }
     }
   }
+
   .viget {
     flex-direction: row;
 
@@ -941,10 +943,4 @@ footer > button {
       margin-left: 55px;
     }
   }
-
-
-
-
-
-
 }
