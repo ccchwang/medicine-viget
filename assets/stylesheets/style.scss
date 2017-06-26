@@ -1,5 +1,15 @@
 $green: #1FB682;
 
+html {
+  overflow: auto
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Poppins";
@@ -7,10 +17,6 @@ $green: #1FB682;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-#main {
-  overflow: hidden
 }
 
 
