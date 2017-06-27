@@ -29,6 +29,8 @@ const convoCards = document.getElementsByClassName('conversation');
 
 
 /*
+***BELOW IS MY EXPERIMENTATION WITH LODASH DEBOUNCE***
+
 //Animating chat bubbles on conversation cards:
 
 const getElementHeight = function (convo) {
