@@ -2,7 +2,7 @@
 
 window.onload = function() {
   //find all convo cards and loop through them
-  let convoCards = document.getElementsByClassName('conversation-card')
+  let convoCards = document.getElementsByClassName('conversation')
 
   Array.prototype.slice.call(convoCards).forEach(convo => {
 
@@ -16,7 +16,7 @@ window.onload = function() {
         convo.className += " current finished";
 
         //find all chat bubbles inside the current convo card
-        let chatList = document.querySelectorAll(`.current > .narrow-padding > .-chat > .bubble`);
+        let chatList = document.querySelectorAll(`.current > .content-wrap > .conversation__wrap > .conversation__chat > .bubble`);
 
         //for each bubble, apply animation delay as indicated by element's data-delay attribute
         Array.prototype.slice.call(chatList).forEach(text => {
@@ -30,7 +30,7 @@ window.onload = function() {
         })
 
         //find and animate the header icon associated with each card
-        document.querySelector(`.current > .about-flo-icon`).className += " animate";
+        document.querySelector(`.current > .content-wrap > .conversation__icon`).className += " animate";
 
         //remove 'current' class from convo card because animation was successfully triggered
         convo.classList.remove("current");
