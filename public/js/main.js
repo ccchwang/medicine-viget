@@ -1,45 +1,50 @@
 //Animating chat bubbles on conversation cards:
 
-window.onload = function() {
-  //find all convo cards and loop through them
-  let convoCards = document.getElementsByClassName('conversation')
+const getElementHeight = function (convo) {
+  return (convo.offsetHeight + convo.offsetTop) / 1.03
+};
 
-  Array.prototype.slice.call(convoCards).forEach(convo => {
+//find all convo cards and map an array of their heights
+const convoCards = document.getElementsByClassName('conversation');
+const convoCardDimensions = [].slice.call(convoCards).map(convo => [convo, getElementHeight(convo)]);
 
-    //for each card, add event listener to be triggered when user scrolls down a percentage of its height
-    window.addEventListener('scroll', function(){
-      let objectBottom = (convo.offsetHeight + convo.offsetTop) / 1.03;
-      let windowBottom = window.innerHeight + window.scrollY;
 
-      if (windowBottom > objectBottom && !convo.className.includes('finished')) {
-        //add 'current' class to card to indicate that this is the convo card currently in motion. add 'finished' class to indicate that animation has been applied.
-        convo.className += " current finished";
+//scroll listener w/ debounced function
+window.addEventListener('scroll', _.debounce(function(){
 
-        //find all chat bubbles inside the current convo card
-        let chatList = document.querySelectorAll(`.current > .content-wrap > .conversation__wrap > .conversation__chat > .bubble`);
+  //find bottom of window
+  const windowBottom = window.innerHeight + window.scrollY;
 
-        //for each bubble, apply animation delay as indicated by element's data-delay attribute
-        Array.prototype.slice.call(chatList).forEach(text => {
-          text.style.animationDelay = `${text.dataset.delay}ms`;
-          text.style.animationPlayState = 'running';
+  //loop through convo cards and check if it has come into view
+  [].slice.call(convoCardDimensions).forEach(convo => {
+    const card = convo[0];
+    const cardBottom = convo[1];
 
-          //adding 'finished' class will cause bubble's spinner to hide and bubble's text to appear
-          setTimeout(function(){
-            text.className += " finished";
-          }, `${1000 + Number(text.dataset.delay)}`)
-        })
+    if (windowBottom > cardBottom && !card.className.includes('finished')) {
+      //add 'current' class to card to indicate that this is the convo card currently in motion. add 'finished' class to indicate that animation has been applied.
+      card.className += " current finished";
 
-        //find and animate the header icon associated with each card
-        document.querySelector(`.current > .content-wrap > .conversation__icon`).className += " animate";
+      //find all chat bubbles inside the current convo card
+      let chatList = document.querySelectorAll(`.current .bubble`);
 
-        //remove 'current' class from convo card because animation was successfully triggered
-        convo.classList.remove("current");
-      }
-    })
+      //for each bubble, apply animation delay as indicated by element's data-delay attribute
+      [].slice.call(chatList).forEach(text => {
+        text.style.animationDelay = `${text.dataset.delay}ms`;
+        text.style.animationPlayState = 'running';
 
+        //adding 'finished' class will cause bubble's spinner to hide and bubble's text to appear
+        setTimeout(function(){
+          text.className += " finished";
+        }, `${1000 + Number(text.dataset.delay)}`)
+      })
+
+      //find and animate the header icon associated with each card
+      document.querySelector(`.current .conversation__icon`).className += " animate";
+
+      //remove 'current' class from convo card because animation was successfully triggered
+      card.classList.remove("current");
+    }
   })
+}, 100))
 
-
-
-}
 
