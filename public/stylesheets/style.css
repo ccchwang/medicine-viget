@@ -21,6 +21,16 @@ body {
   font-size: 18px;
   line-height: 1.777777778; }
 
+.sr-only {
+  clip: rect(1px 1px 1px 1px);
+  /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
+
 .text.-caps {
   text-transform: uppercase; }
 
