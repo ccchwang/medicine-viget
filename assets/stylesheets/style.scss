@@ -1,22 +1,24 @@
 $green: #1FB682;
 
+//GENERAL
+
 html {
   overflow: auto
 }
 
 body {
   height: 100%;
-  width: 100%;
   overflow: hidden;
+  width: 100%;
 }
 
 * {
-  box-sizing: border-box;
-  font-family: "Poppins";
-  color: #504949;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: #504949;
+  font-family: "Poppins";
+  font-weight: 300;
 }
 
 h1, h2, h3, h4 {
@@ -35,6 +37,19 @@ h1, h2, h3, h4 {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.conversation__icon,
+.conversation__background,
+.flo-diagram,
+.meet-flo__img,
+.footer__bg,
+.footer__img,
+.phone,
+.pills {
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute
 }
 
 
@@ -126,10 +141,10 @@ h1, h2, h3, h4 {
 
 cite a {
   color: #EC4444;
+  font-size: 13px;
+  font-style: normal;
   text-decoration: underline;
   vertical-align: super;
-  font-size: 13px;
-  font-style: normal
 }
 
 //BACKGROUNDS
@@ -153,15 +168,15 @@ cite a {
 //PADDING
 
 .content-wrap {
+  margin: 0 auto;
+  max-width: 1075px;
   padding: 50px 15px;
   position: relative;
-  max-width: 1075px;
-  margin: 0 auto;
 }
 
 .lrg-rl-padding {
+  padding-left: 30px;
   padding-right: 30px;
-  padding-left: 30px
 }
 
 .narrow-padding {
@@ -171,53 +186,37 @@ cite a {
 
 //HEADER
 
-.header {
-  min-height: 50vh;
-}
-
 .header__img {
-  width: 100%;
-  margin: 27px auto 50px;
-  max-width: 700px;
-  height: 100%;
   display: block;
-}
-
-.conversation__icon,
-.conversation__background,
-.flo-diagram,
-.flo-img,
-.footer__bg,
-.footer__img,
-.phone,
-.pills {
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute
+  height: 100%;
+  margin: 27px auto;
+  max-width: 700px;
+  width: 100%;
 }
 
 .pills {
   &.-yellow {
     background-image: url('../../public/img/pills_7.png');
     height: 55px;
-    width: 70px;
-    top: -16px;
     left: 10px;
+    top: -16px;
+    width: 70px;
   }
+
   &.-multiple {
     background-image: url('../../public/img/pills_2.png');
     height: 100px;
-    width: 170px;
-    top: -6px;
     right: -105px;
+    top: -6px;
+    width: 170px;
   }
 
   &.-purple {
     background-image: url('../../public/img/pills_5.png');
-    height: 100px;
-    width: 70px;
-    right: -35px;
     bottom: -45px;
+    height: 100px;
+    right: -35px;
+    width: 70px;
     z-index: 1
   }
 }
@@ -235,10 +234,10 @@ cite a {
 }
 
 .quote-container {
-  position: relative;
+  border: none;
   height: 100%;
   margin-bottom: 0;
-  border: none;
+  position: relative;
 }
 
 .quote {
@@ -249,22 +248,22 @@ cite a {
 //DIAGRAM SECTION
 
 .diagram {
-  position: relative;
   padding-top: 25px;
+  position: relative;
 }
 
 .diagram-detail {
   padding-top: 65px;
 
   .diagram-detail__card {
-    position: relative;
-    width: 100%;
     background-color: white;
     border-radius: 10px;
-    padding: 73px 38px 38px;
-    max-width: 700px;
     margin: 0 auto;
+    max-width: 700px;
+    padding: 73px 38px 38px;
+    position: relative;
     text-align: center;
+    width: 100%;
 
     .diagram-detail__card__content {
       @extend %text-small;
@@ -278,32 +277,33 @@ cite a {
 }
 
 .icon {
-  position: absolute;
   border-radius: 100px;
-  right: 0;
   left: 0;
   margin: 0 auto;
+  position: absolute;
+  right: 0;
 
   &.-borders {
-    width: 88px;
+    border: 10px solid rgba(255, 255, 255, 0.57);
     height: 88px;
     top: -33.5px;
-    border: 10px solid rgba(255, 255, 255, 0.57);
+    width: 88px;
   }
+
   &.-color {
+    align-items: center;
+    background-color: #f2c84d;
+    border: 7px solid white;
+    display: flex;
+    height: 71px;
+    justify-content: center;
     top: -25px;
     width: 71px;
-    height: 71px;
-    background-color: #f2c84d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 7px solid white;
+  }
 
-    img.resize {
-      width: 55%;
-      padding-top: 4px
-    }
+  .resize {
+    width: 55%;
+    padding-top: 4px
   }
 }
 
@@ -321,23 +321,23 @@ cite a {
   padding-top: 145px;
 }
 
-.flo-img {
+.meet-flo__img {
   background-image: url("../../public/img/florence_2.png");
-  width: 282px;
   height: 305px;
-  top: -285px;
-  right: 0;
-  margin: 0 auto;
   left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: -285px;
+  width: 282px;
 }
 
 
 //CONVERSATION SECTION
 
 .conversation {
-  max-width: 1075px;
-  margin: 0 auto 100px;
   background-color: white;
+  margin: 0 auto 100px;
+  max-width: 1075px;
 
   &.-cup {
     .conversation__icon {
@@ -345,9 +345,9 @@ cite a {
     }
     .conversation__background {
       background-image: url('../../public/img/section-1-illo-background.jpg');
-      width: 312px;
       height: 126px;
       transform: rotate(180deg);
+      width: 312px;
     }
   }
 
@@ -358,9 +358,9 @@ cite a {
     }
     .conversation__background {
       background-image: url('../../public/img/section-2-illo-background.jpg');
-      width: 330px;
       height: 186px;
       transform: rotate(180deg);
+      width: 330px;
     }
   }
 
@@ -371,21 +371,21 @@ cite a {
     }
     .conversation__background {
       background-image: url('../../public/img/section-3-illo-background.jpg');
-      width: 402px;
       height: 166px;
+      width: 402px;
     }
   }
 
   &.-box {
     .conversation__icon{
+      top: -40px;
       background-image: url('../../public/img/section-4-illo.png');
       width: 260px;
-        top: -40px;
     }
     .conversation__background {
       background-image: url('../../public/img/section-4-illo-background.jpg');
-      width: 558px;
       height: 221px;
+      width: 558px;
     }
   }
 
@@ -397,8 +397,8 @@ cite a {
     }
     .conversation__background {
       background-image: url('../../public/img/section-5-illo-background.jpg');
-      width: 536px;
       height: 187px;
+      width: 536px;
     }
   }
 
@@ -407,20 +407,20 @@ cite a {
 
     .conversation__icon {
       background-image: url('../../public/img/section-6-illo.png');
-      width: 195px;
       top: -100px;
+      width: 195px;
     }
     .conversation__background {
       background-image: url('../../public/img/section-6-illo-background.jpg');
-      width: 396px;
       height: 216px;
       transform: rotate(180deg);
+      width: 396px;
     }
   }
 
   .narrow-padding {
-    z-index: 1;
     position: relative;
+    z-index: 1;
   }
 }
 
@@ -430,19 +430,19 @@ cite a {
 }
 
 .conversation__icon {
-  width: 100px;
   height: 200px;
-  top: -62px;
-  right: 0;
   left: 0;
   margin: 0 auto;
+  right: 0;
+  top: -62px;
+  width: 100px;
   z-index: 2;
 }
 
 .conversation__background {
   left: 0;
-  right: 0;
   margin: 0 auto;
+  right: 0;
   top: 0;
   z-index: 1;
 }
@@ -451,45 +451,45 @@ cite a {
 //BEHIND THE SCENES SECTION
 
 .flo-diagram {
-  position: relative;
   background-image: url("../../public/img/giant-florence-of-doom.png");
-  width: 160px;
   height: 300px;
   margin: 30px auto 0;
+  position: relative;
+  width: 160px;
 }
 
 
 //FOOTER
 
 .contact-btn {
-  color: #f2c84d;
-  border: 4px solid #f2c84d;
   background-color: transparent;
-  padding: 14px 0 12px;
   border-radius: 32px;
-  width: 220px;
-  margin: 0 auto;
+  border: 4px solid #f2c84d;
+  color: #f2c84d;
   display: block;
+  margin: 0 auto;
+  padding: 14px 0 12px;
+  width: 220px;
 }
 
 .footer__bg {
   background-image: url("../../public/img/section-6-illo-background.png");
   bottom: -40px;
   height: 300px;
-  position: absolute;
-  width: 500px;
-  margin: 0 auto;
-  right: 0;
   left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 500px;
 }
 
 .footer__img {
-  position: relative;
+  width: 110px;
+  bottom: -105px;
+  height: 190px;
+  margin: 0 auto;
   background-image: url("../../public/img/giant-florence-of-doom.png");
-      width: 110px;
-    height: 190px;
-    margin: 0 auto;
-    bottom: -105px;
+  position: relative;
 }
 
 //ANIMATE CONVERSATION
@@ -501,36 +501,36 @@ cite a {
 
 //CHAT BUBBLES
 .bubble {
-  position: relative;
-  margin-bottom: 7px;
-  animation: appear-text 0.2s ease-out forwards paused;
   animation-iteration-count: 1;
-  transform-origin: left bottom;
+  animation: appear-text 0.2s ease-out forwards paused;
+  margin-bottom: 7px;
   opacity: 0;
+  position: relative;
+  transform-origin: left bottom;
 
   //BUBBLE - formatting how the bubbles look
   p, .spinner {
-    line-height: 1.375;
+    background-color: #e2ebe9;
+    border-radius: 15px;
     color: #252224;
     display: inline-block;
-    border-radius: 15px;
-    background-color: #e2ebe9;
-    padding: 12px;
+    line-height: 1.375;
     margin: 0;
+    padding: 12px;
   }
 
   //BUBBLE - typing spinner
   .spinner {
-    position: absolute;
     bottom: 0;
+    position: absolute;
 
     > span {
-      width: 8px;
-      height: 8px;
-      background: #514D4C;
-      display: inline-block;
-      border-radius: 100px;
       animation: typing-dots 1s ease-in infinite;
+      background: #514D4C;
+      border-radius: 100px;
+      display: inline-block;
+      height: 8px;
+      width: 8px;
 
       &:nth-child(2) {
         animation-delay: 0.2s;
@@ -544,14 +544,15 @@ cite a {
   //BUBBLE - pseudo elements to get the tail on chat bubbles
   &.-bot-avatar,
   &.-response {
+
     //gray tail
     &::after {
       content: '';
       position: absolute;
-      height: 10px;
-      width: 20px;
       background-color: #e2ebe9;
       bottom: 7px;
+      height: 10px;
+      width: 20px;
     }
 
     //white circle to partially cover gray tail
@@ -559,11 +560,11 @@ cite a {
     p::after {
       content: '';
       position: absolute;
+      background-color: white;
+      border-radius: 100px;
       bottom: 8px;
       height: 20px;
       width: 20px;
-      background-color: white;
-      border-radius: 100px;
       z-index: 1;
     }
   }
@@ -574,12 +575,13 @@ cite a {
       content: url('../../public/img/avatar_2.png');
       background-color: #f2c84d;
       border-radius: 300px;
-      padding: 4px 6px 0 5px;
-      left: -50px;
-      position: absolute;
       bottom: 0;
+      left: -50px;
+      padding: 4px 6px 0 5px;
+      position: absolute;
       z-index: 2;
     }
+
     &::after {
       left: -10px;
     }
@@ -592,9 +594,9 @@ cite a {
 
   //BUBBLE - response bubbles
   &.-response {
+    align-self: flex-end;
     animation-name: appear-text-right;
     transform-origin: right bottom;
-    align-self: flex-end;
 
     p {
       background-color: #1793ad;
@@ -605,9 +607,10 @@ cite a {
       background-color: #1793ad;
       right: -8px;
     }
+
     > p::after {
-      right: -20px;
       bottom: 7px;
+      right: -20px;
     }
   }
 
@@ -622,6 +625,7 @@ cite a {
       .spinner {
         visibility: hidden;
       }
+
       p {
         opacity: 1;
       }
@@ -675,19 +679,19 @@ cite a {
 
 .footer {
   .heading-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
 }
 
 .logo {
   background: url("../../public/img/viget.png");
-  width: 125px;
   height: 62px;
   position: relative;
   right: -30px;
+  width: 125px;
 
   &::before {
     content: url('../../public/img/viget_2.png');
@@ -700,16 +704,103 @@ cite a {
 
 @media screen and (min-width: 1017px) {
 
+  .bg-green, .bg-blue, .bg-gradient {
+    padding: 0 15px;
+  }
+
+  .content-wrap {
+    padding: 75px 100px;
+  }
+
+  .pills {
+    &.-double {
+      background-image: url('../../public/img/pills_6.png');
+      bottom: 100px;
+      height: 120px;
+      left: -20px;
+      width: 170px;
+    }
+
+    &.-multiple {
+      height: 300px;
+      right: -20px;
+      width: 250px;
+    }
+
+    &.-yellow {
+      height: 200px;
+      left: 100px;
+      top: -30px;
+      width: 100px;
+    }
+    &.-purple {
+      height: 125px;
+      right: 0;
+      width: 140px;
+    }
+
+    &.bottle-1 {
+      background-image: url("../../public/img/pills_3.png");
+      height: 227px;
+      left: -30px;
+      top: 86px;
+      width: 155px;
+      z-index: 1;
+    }
+
+    &.bottle-2 {
+      background-image: url('../../public/img/pills_4.png');
+      height: 244px;
+      left: 70px;
+      top: 5px;
+      width: 120px;
+    }
+
+    &.bottle-3 {
+      background-image: url('../../public/img/pills.png');
+      height: 401px;
+      left: -175px;
+      top: -70px;
+      width: 190px;
+    }
+  }
+
+  .phone {
+    background-image: url('../../public/img/phone.png');
+    height: 445px;
+    right: -280px;
+    width: 270px;
+  }
+
+  .intro {
+    border-radius: 6px;
+    margin: 0 auto 100px;
+    max-width: 1075px;
+  }
+
+  .quote {
+    left: 0;
+    margin: 0 30%;
+    position: relative;
+    right: 0;
+    width: 570px;
+  }
+
+  .question__content {
+    position: relative;
+    width: 730px;
+  }
+
   .conversation {
     border-radius: 6px;
 
     &.-cup {
       .conversation__icon {
-        width: 160px;
-        height: 171px;
         bottom: -22px;
-        top: inherit;
+        height: 171px;
         left: 210px;
+        top: inherit;
+        width: 160px;
       }
       .conversation__background {
         bottom: 0;
@@ -721,11 +812,11 @@ cite a {
 
     &.-pills {
       .conversation__icon {
-        width: 130px;
-        height: 198px;
         bottom: -40px;
-        top: inherit;
+        height: 198px;
         left: 210px;
+        top: inherit;
+        width: 130px;
       }
       .conversation__background {
         bottom: 0;
@@ -737,10 +828,10 @@ cite a {
 
     &.-temp {
       .conversation__icon {
-        width: 103px;
         height: 146px;
         left: 408px;
         top: -30px;
+        width: 103px;
       }
       .conversation__background {
         left: 250px;
@@ -749,9 +840,9 @@ cite a {
 
     &.-box {
       .conversation__icon {
-        width: 408px;
         height: 141px;
         left: 121px;
+        width: 408px;
       }
       .conversation__background {
         left: 20px;
@@ -762,10 +853,10 @@ cite a {
       margin-bottom: 100px;
 
       .conversation__icon {
-        width: 159px;
         height: 200px;
-        top: -83px;
         left: 219px;
+        top: -83px;
+        width: 159px;
       }
       .conversation__background {
         left: 20px;
@@ -774,16 +865,16 @@ cite a {
 
     &.-cheer {
       .conversation__icon {
-        width: 203px;
-        top: inherit;
-        height: 105px;
         bottom: 0;
+        height: 105px;
         left: 194px;
+        top: inherit;
+        width: 203px;
       }
 
       .conversation__background {
-        left: 105px;
         bottom: 0;
+        left: 105px;
         top: inherit;
         transform: rotate(0deg);
       }
@@ -817,8 +908,8 @@ cite a {
     opacity: 0;
 
     &.animate {
-      transform: translateY(0px) !important;
       opacity: 1;
+      transform: translateY(0px) !important;
       transition: 1s transform ease-in-out, 1s opacity ease-in-out
     }
   }
@@ -830,8 +921,8 @@ cite a {
 
   //conversation wrapper
   .conversation__wrap {
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
 
     .conversation__content, .conversation__chat  {
       z-index: 1;
@@ -842,8 +933,8 @@ cite a {
     }
 
     .conversation__content {
-      width: 60%;
       margin-right: 50px;
+      width: 60%;
 
       .-centered {
         text-align: left
@@ -851,106 +942,20 @@ cite a {
     }
   }
 
-
   .meet-flo {
     .heading-container > .-large {
       font-size: 60px
     }
   }
 
-  .bg-green, .bg-blue, .bg-gradient {
-    padding: 0 15px;
-  }
-
-  .content-wrap {
-    padding: 75px 100px;
-  }
-
-  .intro {
-    border-radius: 6px;
-    max-width: 1075px;
-    margin: 0 auto 100px;
-  }
-
-  .pills {
-    &.-double {
-      background-image: url('../../public/img/pills_6.png');
-      height: 120px;
-      width: 170px;
-      bottom: 100px;
-      left: -20px;
-    }
-
-    &.-multiple {
-      height: 300px;
-      width: 250px;
-      right: -20px;
-    }
-
-    &.-yellow {
-      height: 200px;
-      width: 100px;
-      top: -30px;
-      left: 100px;
-    }
-    &.-purple {
-      height: 125px;
-      width: 140px;
-      right: 0;
-    }
-
-    &.bottle-1 {
-      background-image: url("../../public/img/pills_3.png");
-      width: 155px;
-      height: 227px;
-      left: -30px;
-      top: 86px;
-      z-index: 1;
-    }
-    &.bottle-2 {
-      background-image: url('../../public/img/pills_4.png');
-      width: 120px;
-      height: 244px;
-      left: 70px;
-      top: 5px
-    }
-
-    &.bottle-3 {
-      background-image: url('../../public/img/pills.png');
-      width: 190px;
-      height: 401px;
-      left: -175px;
-      top: -70px;
-    }
-  }
-
-  .quote {
-    position: relative;
-    width: 570px;
-    right: 0;
-    left: 0;
-    margin: 0 30%;
-  }
-
-  .phone {
-    background-image: url('../../public/img/phone.png');
-    width: 270px;
-    height: 445px;
-    right: -280px;
-  }
-
-  .question__content {
-    width: 730px;
-    position: relative
-  }
 }
 
 @media screen and (min-width: 1200px) {
   .flo-diagram {
-    width: 389px;
     height: 641px;
+    margin-bottom: 150px;
     margin-top: 100px;
-    margin-bottom: 150px
+    width: 389px;
   }
 
   .diagram-detail:nth-child(1) {
@@ -977,12 +982,12 @@ cite a {
       left: -50px;
 
       .diagram-detail__card {
-        width: 494px;
+        border-bottom-right-radius: 70px;
+        border-top-right-radius: 70px;
+        margin: 0;
         padding: 40px 60px 30px 25px;
         text-align: right;
-        border-top-right-radius: 70px;
-        border-bottom-right-radius: 70px;
-        margin: 0;
+        width: 494px;
 
         .diagram-detail__card__content {
           font-size: 16px;
@@ -992,8 +997,8 @@ cite a {
 
     //cards going in reverse direction
     .diagram-detail.-reverse {
-      right: -50px;
       left: inherit;
+      right: -50px;
 
       .diagram-detail__card {
         border-radius: 70px 10px 10px 70px;
@@ -1013,18 +1018,18 @@ cite a {
 
     //card icons
     .icon {
-      left: inherit;
       bottom: 0;
+      left: inherit;
       margin: auto;
 
       &.-color {
-        top: 0;
         right: -33px;
+        top: 0;
       }
 
       &.-borders {
-        top: 0;
         right: -43px;
+        top: 0;
       }
     }
 
