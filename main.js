@@ -1,3 +1,34 @@
+const inViewport = require('in-viewport');
+
+//find all convo cards
+const convoCards = document.getElementsByClassName('conversation');
+
+//for each card, define inViewport callback function
+[].slice.call(convoCards).forEach(card => inViewport(card, { offset: -200 }, function() {
+
+    //get card's classes so it can be used as a querying string
+    const cardSelector = card.className.split(" ").join(".");
+
+    //find all chat bubbles inside card
+    const chatList = document.querySelectorAll(`.${cardSelector} .bubble`);
+
+    //for each bubble, apply animation delay as indicated by element's data-delay attribute
+    [].slice.call(chatList).forEach(text => {
+      text.style.animationDelay = `${text.dataset.delay}ms`;
+      text.style.animationPlayState = 'running';
+
+      //adding 'finished' class will cause bubble's spinner to hide and bubble's text to appear
+      setTimeout(function(){
+        text.className += " finished";
+      }, `${1000 + Number(text.dataset.delay)}`)
+    })
+
+    //find and animate the header icon associated with each card
+    document.querySelector(`.${cardSelector} .conversation__icon`).className += " animate";
+}))
+
+
+/*
 //Animating chat bubbles on conversation cards:
 
 const getElementHeight = function (convo) {
@@ -48,3 +79,5 @@ window.addEventListener('scroll', _.debounce(function(){
 }, 100))
 
 
+
+ */

@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "in-viewport": "^3.5.0",
     "node-sass": "^4.5.0"
   }
 }
