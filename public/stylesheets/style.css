@@ -14,12 +14,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+h1, h2, h3, h4 {
+  margin-top: 0; }
+
 .heading-container {
   text-align: center; }
-
-.diagram-detail .diagram-detail__card .diagram-detail__card__content {
-  font-size: 18px;
-  line-height: 1.777777778; }
 
 .sr-only {
   clip: rect(1px 1px 1px 1px);
@@ -31,14 +30,21 @@ body {
   white-space: nowrap;
   width: 1px; }
 
-.text.-caps {
+.text--subheading, .text.-small, .diagram-detail .diagram-detail__card .diagram-detail__card__content {
+  font-size: 18px;
+  line-height: 1.777777778; }
+
+.text--subheading, .text.-caps {
   text-transform: uppercase; }
+
+.text--subheading, .text.-bold {
+  font-weight: 600; }
+
+.text--subheading, .text.-color-accent {
+  color: #BB7140; }
 
 .text.-centered {
   text-align: center; }
-
-.text.-bold {
-  font-weight: 600; }
 
 .text.-wide-spacing {
   letter-spacing: .23em; }
@@ -50,10 +56,6 @@ body {
 .text.-x-small {
   font-size: 14px;
   line-height: 1.733333333; }
-
-.text.-small {
-  font-size: 18px;
-  line-height: 1.777777778; }
 
 .text.-medium {
   font-size: 20px;
@@ -72,9 +74,6 @@ body {
 
 .text.-color-white {
   color: white; }
-
-.text.-color-accent {
-  color: #BB7140; }
 
 cite a {
   color: #EC4444;
@@ -554,7 +553,7 @@ cite a {
       margin-right: 50px; }
       .conversation__wrap .conversation__content .-centered {
         text-align: left; }
-  .meet-flo > div > .-large {
+  .meet-flo .heading-container > .-large {
     font-size: 60px; }
   .bg-green, .bg-blue, .bg-gradient {
     padding: 0 15px; }
