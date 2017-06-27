@@ -17,10 +17,14 @@ body {
 .heading-container {
   text-align: center; }
 
+.diagram-detail .diagram-detail__card .diagram-detail__card__content {
+  font-size: 18px;
+  line-height: 1.777777778; }
+
 .text.-caps {
   text-transform: uppercase; }
 
-.centered {
+.text.-centered {
   text-align: center; }
 
 .text.-bold {
@@ -36,10 +40,6 @@ body {
 .text.-x-small {
   font-size: 14px;
   line-height: 1.733333333; }
-
-.diagram-detail__card__content {
-  font-size: 18px;
-  line-height: 1.777777778; }
 
 .text.-small {
   font-size: 18px;
@@ -110,7 +110,6 @@ cite a {
 
 .conversation__icon,
 .conversation__background,
-.anatomy,
 .flo-diagram,
 .flo-img,
 .footer__bg,
@@ -143,10 +142,8 @@ cite a {
   bottom: -45px;
   z-index: 1; }
 
-.intro > div > p,
-.narrow-padding > p,
-.narrow-padding > div > p,
-.diagram-detail.-last {
+.intro .text,
+.narrow-padding .text {
   margin-bottom: 40px; }
 
 .quote-container {
@@ -164,16 +161,19 @@ cite a {
 
 .diagram-detail {
   padding-top: 65px; }
-
-.diagram-detail__card {
-  position: relative;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-  padding: 73px 38px 38px;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center; }
+  .diagram-detail .diagram-detail__card {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 73px 38px 38px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center; }
+    .diagram-detail .diagram-detail__card .diagram-detail__card__content {
+      line-height: 1.375; }
+  .diagram-detail.-last {
+    margin-bottom: 40px; }
 
 .icon {
   position: absolute;
@@ -199,9 +199,6 @@ cite a {
       width: 55%;
       padding-top: 4px; }
 
-.diagram-detail__card__content {
-  line-height: 1.375; }
-
 .question {
   padding-bottom: 140px; }
 
@@ -221,9 +218,6 @@ cite a {
   max-width: 1075px;
   margin: 0 auto 100px;
   background-color: white; }
-  .conversation .narrow-padding {
-    z-index: 1;
-    position: relative; }
   .conversation.-cup .conversation__icon {
     background-image: url("../../public/img/section-1-illo.png"); }
   .conversation.-cup .conversation__background {
@@ -273,6 +267,9 @@ cite a {
       width: 396px;
       height: 216px;
       transform: rotate(180deg); }
+  .conversation .narrow-padding {
+    z-index: 1;
+    position: relative; }
 
 .conversation__wrap {
   display: flex;
@@ -329,7 +326,7 @@ cite a {
   margin: 0 auto;
   bottom: -105px; }
 
-.conversation__wrap > .conversation__chat {
+.conversation__chat {
   display: flex;
   flex-direction: column;
   margin-left: 50px; }
@@ -443,7 +440,7 @@ cite a {
   60% {
     background: #514D4C; } }
 
-.page-footer .heading-container {
+.footer .heading-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -461,35 +458,6 @@ cite a {
     left: -70px; }
 
 @media screen and (min-width: 1017px) {
-  .conversation__wrap {
-    flex-direction: row;
-    align-items: center; }
-  .conversation__content, .conversation__chat {
-    z-index: 1; }
-  .conversation__chat {
-    width: 40%; }
-  .conversation__content {
-    width: 60%;
-    margin-right: 50px; }
-    .conversation__content .centered {
-      text-align: left; }
-  .conversation__icon {
-    margin: 0;
-    opacity: 0; }
-  .conversation__icon.animate {
-    transform: translateY(0px) !important;
-    opacity: 1;
-    transition: 1s transform ease-in-out, 1s opacity ease-in-out; }
-  .conversation__background {
-    margin: initial; }
-  .conversation:nth-child(1) > .content-wrap > .conversation__icon,
-  .conversation:nth-child(2) > .content-wrap > .conversation__icon,
-  .conversation:nth-child(6) > .content-wrap > .conversation__icon {
-    transform: translateY(50px); }
-  .conversation:nth-child(3) > .content-wrap > .conversation__icon,
-  .conversation:nth-child(4) > .content-wrap > .conversation__icon,
-  .conversation:nth-child(5) > .content-wrap > .conversation__icon {
-    transform: translateY(-50px); }
   .conversation {
     border-radius: 6px; }
     .conversation.-cup .conversation__icon {
@@ -547,6 +515,35 @@ cite a {
       bottom: 0;
       top: inherit;
       transform: rotate(0deg); }
+  .conversation:nth-child(1) > .content-wrap > .conversation__icon,
+  .conversation:nth-child(2) > .content-wrap > .conversation__icon,
+  .conversation:nth-child(6) > .content-wrap > .conversation__icon {
+    transform: translateY(50px); }
+  .conversation:nth-child(3) > .content-wrap > .conversation__icon,
+  .conversation:nth-child(4) > .content-wrap > .conversation__icon,
+  .conversation:nth-child(5) > .content-wrap > .conversation__icon {
+    transform: translateY(-50px); }
+  .conversation__icon {
+    margin: 0;
+    opacity: 0; }
+    .conversation__icon.animate {
+      transform: translateY(0px) !important;
+      opacity: 1;
+      transition: 1s transform ease-in-out, 1s opacity ease-in-out; }
+  .conversation__background {
+    margin: initial; }
+  .conversation__wrap {
+    flex-direction: row;
+    align-items: center; }
+    .conversation__wrap .conversation__content, .conversation__wrap .conversation__chat {
+      z-index: 1; }
+    .conversation__wrap .conversation__chat {
+      width: 40%; }
+    .conversation__wrap .conversation__content {
+      width: 60%;
+      margin-right: 50px; }
+      .conversation__wrap .conversation__content .-centered {
+        text-align: left; }
   .meet-flo > div > .-large {
     font-size: 60px; }
   .bg-green, .bg-blue, .bg-gradient {
@@ -629,39 +626,39 @@ cite a {
   .diagram-detail-container .diagram-detail {
     position: absolute;
     left: -50px; }
-    .diagram-detail-container .diagram-detail.-reverse {
-      right: -50px;
-      left: inherit; }
-      .diagram-detail-container .diagram-detail.-reverse .diagram-detail__card {
-        border-radius: 70px 10px 10px 70px;
-        padding: 40px 25px 30px 60px;
-        text-align: left; }
-        .diagram-detail-container .diagram-detail.-reverse .diagram-detail__card .icon.-color {
-          left: -33px;
-          right: inherit; }
-        .diagram-detail-container .diagram-detail.-reverse .diagram-detail__card .icon.-borders {
-          left: -43px;
-          right: inherit; }
-  .diagram-detail-container .diagram-detail__card {
-    width: 494px;
-    padding: 40px 60px 30px 25px;
-    text-align: right;
-    border-top-right-radius: 70px;
-    border-bottom-right-radius: 70px;
-    margin: 0; }
-    .diagram-detail-container .diagram-detail__card .diagram-detail__card__content {
-      font-size: 16px; }
+    .diagram-detail-container .diagram-detail .diagram-detail__card {
+      width: 494px;
+      padding: 40px 60px 30px 25px;
+      text-align: right;
+      border-top-right-radius: 70px;
+      border-bottom-right-radius: 70px;
+      margin: 0; }
+      .diagram-detail-container .diagram-detail .diagram-detail__card .diagram-detail__card__content {
+        font-size: 16px; }
+  .diagram-detail-container .diagram-detail.-reverse {
+    right: -50px;
+    left: inherit; }
+    .diagram-detail-container .diagram-detail.-reverse .diagram-detail__card {
+      border-radius: 70px 10px 10px 70px;
+      padding: 40px 25px 30px 60px;
+      text-align: left; }
+      .diagram-detail-container .diagram-detail.-reverse .diagram-detail__card .icon.-color {
+        left: -33px;
+        right: inherit; }
+      .diagram-detail-container .diagram-detail.-reverse .diagram-detail__card .icon.-borders {
+        left: -43px;
+        right: inherit; }
   .diagram-detail-container .icon {
     left: inherit;
     bottom: 0;
     margin: auto; }
-  .diagram-detail-container .icon.-color {
-    top: 0;
-    right: -33px; }
-  .diagram-detail-container .icon.-borders {
-    top: 0;
-    right: -43px; }
-  .page-footer .heading-container {
+    .diagram-detail-container .icon.-color {
+      top: 0;
+      right: -33px; }
+    .diagram-detail-container .icon.-borders {
+      top: 0;
+      right: -43px; }
+  .footer .heading-container {
     flex-direction: row; }
   .logo {
     margin-left: 55px; } }
