@@ -4,6 +4,7 @@
 ## Requirements
 
 * [Node](https://nodejs.org/download/) (v0.10.x or greater)
+* [npm](https://www.npmjs.com/) package manager
 
 ## Installation
 
