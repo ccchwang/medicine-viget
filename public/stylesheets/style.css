@@ -1,47 +1,3 @@
-html {
-  overflow: auto; }
-
-body {
-  height: 100%;
-  overflow: hidden;
-  width: 100%; }
-
-* {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  color: #504949;
-  font-family: "Poppins";
-  font-weight: 300; }
-
-h1, h2, h3, h4 {
-  margin-top: 0; }
-
-.heading-container {
-  text-align: center; }
-
-.sr-only {
-  clip: rect(1px 1px 1px 1px);
-  /* IE 6/7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px; }
-
-.conversation__icon,
-.conversation__background,
-.flo-diagram,
-.meet-flo__img,
-.footer__bg,
-.footer__img,
-.phone,
-.pills {
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute; }
-
 .text--subheading, .text.-small, .diagram-detail .diagram-detail__card .diagram-detail__card__content {
   font-size: 18px;
   line-height: 1.777777778; }
@@ -54,6 +10,13 @@ h1, h2, h3, h4 {
 
 .text--subheading, .text.-color-accent {
   color: #BB7140; }
+
+.text.-font-smooth, .bubble.-response p, .contact-btn {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1, h2, h3, h4 {
+  margin-top: 0; }
 
 .text.-centered {
   text-align: center; }
@@ -87,13 +50,6 @@ h1, h2, h3, h4 {
 .text.-color-white {
   color: white; }
 
-cite a {
-  color: #EC4444;
-  font-size: 13px;
-  font-style: normal;
-  text-decoration: underline;
-  vertical-align: super; }
-
 .bg-green {
   background-color: #d2e7e2; }
 
@@ -105,6 +61,11 @@ cite a {
 
 .bg-gradient {
   background: linear-gradient(#184d66, #d2e7e2); }
+
+.pills, .flo-diagram, .meet-flo__img, .conversation__icon, .conversation__background, .footer__bg, .footer__img, .phone {
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute; }
 
 .content-wrap {
   margin: 0 auto;
@@ -148,6 +109,13 @@ cite a {
   width: 70px;
   z-index: 1; }
 
+cite a {
+  color: #EC4444;
+  font-size: 13px;
+  font-style: normal;
+  text-decoration: underline;
+  vertical-align: super; }
+
 .intro .text,
 .narrow-padding .text {
   margin-bottom: 40px; }
@@ -178,7 +146,7 @@ cite a {
     width: 100%; }
     .diagram-detail .diagram-detail__card .diagram-detail__card__content {
       line-height: 1.375; }
-  .diagram-detail.-last {
+  .diagram-detail:last-child {
     margin-bottom: 40px; }
 
 .icon {
@@ -204,6 +172,13 @@ cite a {
   .icon .resize {
     width: 55%;
     padding-top: 4px; }
+
+.flo-diagram {
+  background-image: url("../../public/img/giant-florence-of-doom.png");
+  height: 300px;
+  margin: 30px auto 0;
+  position: relative;
+  width: 160px; }
 
 .question {
   padding-bottom: 140px; }
@@ -297,41 +272,6 @@ cite a {
   top: 0;
   z-index: 1; }
 
-.flo-diagram {
-  background-image: url("../../public/img/giant-florence-of-doom.png");
-  height: 300px;
-  margin: 30px auto 0;
-  position: relative;
-  width: 160px; }
-
-.contact-btn {
-  background-color: transparent;
-  border-radius: 32px;
-  border: 4px solid #f2c84d;
-  color: #f2c84d;
-  display: block;
-  margin: 0 auto;
-  padding: 14px 0 12px;
-  width: 220px; }
-
-.footer__bg {
-  background-image: url("../../public/img/section-6-illo-background.png");
-  bottom: -40px;
-  height: 300px;
-  left: 0;
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-  width: 500px; }
-
-.footer__img {
-  width: 110px;
-  bottom: -105px;
-  height: 190px;
-  margin: 0 auto;
-  background-image: url("../../public/img/giant-florence-of-doom.png");
-  position: relative; }
-
 .conversation__chat {
   display: flex;
   flex-direction: column;
@@ -367,11 +307,11 @@ cite a {
       .bubble .spinner > span:nth-child(3) {
         animation-delay: 0.4s; }
   .bubble.-bot-avatar::after, .bubble.-response::after {
-    content: '';
-    position: absolute;
     background-color: #e2ebe9;
     bottom: 7px;
+    content: '';
     height: 10px;
+    position: absolute;
     width: 20px; }
   .bubble.-bot-avatar .spinner::after,
   .bubble.-bot-avatar p::after, .bubble.-response .spinner::after,
@@ -462,6 +402,62 @@ cite a {
     content: url("../../public/img/viget_2.png");
     position: absolute;
     left: -70px; }
+
+.footer__bg {
+  background-image: url("../../public/img/section-6-illo-background.png");
+  bottom: -40px;
+  height: 300px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 500px; }
+
+.footer__img {
+  width: 110px;
+  bottom: -105px;
+  height: 190px;
+  margin: 0 auto;
+  background-image: url("../../public/img/giant-florence-of-doom.png");
+  position: relative; }
+
+html {
+  overflow: auto; }
+
+body {
+  height: 100%;
+  overflow: hidden;
+  width: 100%; }
+
+* {
+  box-sizing: border-box;
+  color: #504949;
+  font-family: "Poppins";
+  font-weight: 300; }
+
+.heading-container {
+  text-align: center; }
+
+.sr-only {
+  border: none;
+  clip: rect(1px 1px 1px 1px);
+  /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
+
+.contact-btn {
+  background-color: transparent;
+  border-radius: 32px;
+  border: 4px solid #f2c84d;
+  color: #f2c84d;
+  display: block;
+  margin: 0 auto;
+  padding: 14px 0 12px;
+  width: 220px; }
 
 @media screen and (min-width: 1017px) {
   .bg-green, .bg-blue, .bg-gradient {

@@ -1,0 +1,49 @@
+
+
+//HEADER
+
+.header__img {
+  display: block;
+  height: 100%;
+  margin: 27px auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+.pills {
+  @extend %background-position;
+
+  &.-yellow {
+    background-image: url('../../public/img/pills_7.png');
+    height: 55px;
+    left: 10px;
+    top: -16px;
+    width: 70px;
+  }
+
+  &.-multiple {
+    background-image: url('../../public/img/pills_2.png');
+    height: 100px;
+    right: -105px;
+    top: -6px;
+    width: 170px;
+  }
+
+  &.-purple {
+    background-image: url('../../public/img/pills_5.png');
+    bottom: -45px;
+    height: 100px;
+    right: -35px;
+    width: 70px;
+    z-index: 1
+  }
+}
+
+cite a {
+  color: color(red);
+  font-size: 13px;
+  font-style: normal;
+  text-decoration: underline;
+  vertical-align: super;
+}
+

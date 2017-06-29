@@ -1,0 +1,16 @@
+//MEET FLO SECTION
+
+.meet-flo {
+  padding-top: 145px;
+}
+
+.meet-flo__img {
+  @extend %background-position;
+  background-image: url("../../public/img/florence_2.png");
+  height: 305px;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: -285px;
+  width: 282px;
+}

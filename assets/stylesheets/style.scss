@@ -1,4 +1,21 @@
-$green: #1FB682;
+//config
+@import './config/colors';
+
+//base
+@import './base/typography';
+@import './base/backgrounds';
+@import './base/padding';
+
+//page components
+@import './modules/header';
+@import './modules/intro';
+@import './modules/diagram';
+@import './modules/question';
+@import './modules/meet-flo';
+@import './modules/conversation';
+@import './modules/footer';
+
+
 
 //GENERAL
 
@@ -13,23 +30,19 @@ body {
 }
 
 * {
-	-moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   color: #504949;
   font-family: "Poppins";
   font-weight: 300;
 }
 
-h1, h2, h3, h4 {
-  margin-top: 0;
-}
 
 .heading-container {
   text-align: center;
 }
 
 .sr-only {
+  border: none;
   clip: rect(1px 1px 1px 1px); /* IE 6/7 */
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
@@ -39,667 +52,22 @@ h1, h2, h3, h4 {
   width: 1px;
 }
 
-.conversation__icon,
-.conversation__background,
-.flo-diagram,
-.meet-flo__img,
-.footer__bg,
-.footer__img,
-.phone,
-.pills {
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute
+.phone {
+  @extend %background-position;
 }
 
-
-//TEXT STYLES
-
-//just experimenting with @extend
-%text-small {
-  font-size: 18px;
-  line-height: 1.777777778;
-}
-
-%text-caps {
-  text-transform: uppercase;
-}
-
-%text-bold {
-  font-weight: 600;
-}
-
-%text-color-accent {
-  color: #BB7140;
-}
-
-.text--subheading {
-  @extend %text-small;
-  @extend %text-caps;
-  @extend %text-bold;
-  @extend %text-color-accent;
-}
-
-.text {
-  &.-caps {
-    @extend %text-caps;
-  }
-
-  &.-centered {
-    text-align: center;
-  }
-
-  &.-bold {
-    @extend %text-bold
-  }
-
-  &.-wide-spacing {
-    letter-spacing: .23em;
-  }
-
-  &.-serif {
-    font-family: 'Merriweather';
-    font-weight: 300;
-  }
-
-  &.-x-small {
-    font-size: 14px;
-    line-height: 1.733333333;
-  }
-
-  &.-small {
-    @extend %text-small;
-  }
-
-  &.-medium {
-    font-size: 20px;
-    line-height: 1.428571429;
-  }
-
-  &.-large {
-    font-size: 28px;
-    line-height: 1.428571429;
-  }
-
-  &.-color-dark {
-    color:#0e5254;
-  }
-
-  &.-color-lightblue {
-    color: #1394AA;
-    margin-bottom: 30px
-  }
-
-  &.-color-white {
-    color:white;
-  }
-
-  &.-color-accent {
-    @extend %text-color-accent;
-  }
-}
-
-cite a {
-  color: #EC4444;
-  font-size: 13px;
-  font-style: normal;
-  text-decoration: underline;
-  vertical-align: super;
-}
-
-//BACKGROUNDS
-
-.bg-green {
-  background-color: #d2e7e2;
-}
-
-.bg-white {
-  background-color: white;
-}
-
-.bg-blue {
-  background-color: #184d66;
-}
-
-.bg-gradient {
-  background: linear-gradient(#184d66, #d2e7e2);
-}
-
-//PADDING
-
-.content-wrap {
-  margin: 0 auto;
-  max-width: 1075px;
-  padding: 50px 15px;
-  position: relative;
-}
-
-.lrg-rl-padding {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.narrow-padding {
-  padding: 30px 15px 0
-}
-
-
-//HEADER
-
-.header__img {
-  display: block;
-  height: 100%;
-  margin: 27px auto;
-  max-width: 700px;
-  width: 100%;
-}
-
-.pills {
-  &.-yellow {
-    background-image: url('../../public/img/pills_7.png');
-    height: 55px;
-    left: 10px;
-    top: -16px;
-    width: 70px;
-  }
-
-  &.-multiple {
-    background-image: url('../../public/img/pills_2.png');
-    height: 100px;
-    right: -105px;
-    top: -6px;
-    width: 170px;
-  }
-
-  &.-purple {
-    background-image: url('../../public/img/pills_5.png');
-    bottom: -45px;
-    height: 100px;
-    right: -35px;
-    width: 70px;
-    z-index: 1
-  }
-}
-
-
-
-
-//INTRO SECTION
-
-.intro,
-.narrow-padding {
-  .text {
-    margin-bottom: 40px
-  }
-}
-
-.quote-container {
-  border: none;
-  height: 100%;
-  margin-bottom: 0;
-  position: relative;
-}
-
-.quote {
-  text-align: center;
-}
-
-
-//DIAGRAM SECTION
-
-.diagram {
-  padding-top: 25px;
-  position: relative;
-}
-
-.diagram-detail {
-  padding-top: 65px;
-
-  .diagram-detail__card {
-    background-color: white;
-    border-radius: 10px;
-    margin: 0 auto;
-    max-width: 700px;
-    padding: 73px 38px 38px;
-    position: relative;
-    text-align: center;
-    width: 100%;
-
-    .diagram-detail__card__content {
-      @extend %text-small;
-      line-height: 1.375
-    }
-  }
-
-  &.-last {
-    margin-bottom: 40px
-  }
-}
-
-.icon {
-  border-radius: 100px;
-  left: 0;
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-
-  &.-borders {
-    border: 10px solid rgba(255, 255, 255, 0.57);
-    height: 88px;
-    top: -33.5px;
-    width: 88px;
-  }
-
-  &.-color {
-    align-items: center;
-    background-color: #f2c84d;
-    border: 7px solid white;
-    display: flex;
-    height: 71px;
-    justify-content: center;
-    top: -25px;
-    width: 71px;
-  }
-
-  .resize {
-    width: 55%;
-    padding-top: 4px
-  }
-}
-
-
-//QUESTION SECTION
-
-.question {
-  padding-bottom: 140px;
-}
-
-
-//MEET FLO SECTION
-
-.meet-flo {
-  padding-top: 145px;
-}
-
-.meet-flo__img {
-  background-image: url("../../public/img/florence_2.png");
-  height: 305px;
-  left: 0;
-  margin: 0 auto;
-  right: 0;
-  top: -285px;
-  width: 282px;
-}
-
-
-//CONVERSATION SECTION
-
-.conversation {
-  background-color: white;
-  margin: 0 auto 100px;
-  max-width: 1075px;
-
-  &.-cup {
-    .conversation__icon {
-      background-image: url('../../public/img/section-1-illo.png');
-    }
-    .conversation__background {
-      background-image: url('../../public/img/section-1-illo-background.jpg');
-      height: 126px;
-      transform: rotate(180deg);
-      width: 312px;
-    }
-  }
-
-  &.-pills {
-    .conversation__icon {
-      background-image: url('../../public/img/pills_3.png');
-      width: 80px;
-    }
-    .conversation__background {
-      background-image: url('../../public/img/section-2-illo-background.jpg');
-      height: 186px;
-      transform: rotate(180deg);
-      width: 330px;
-    }
-  }
-
-  &.-temp {
-    .conversation__icon {
-      background-image: url('../../public/img/section-3-illo.png');
-      width: 80px;
-    }
-    .conversation__background {
-      background-image: url('../../public/img/section-3-illo-background.jpg');
-      height: 166px;
-      width: 402px;
-    }
-  }
-
-  &.-box {
-    .conversation__icon{
-      top: -40px;
-      background-image: url('../../public/img/section-4-illo.png');
-      width: 260px;
-    }
-    .conversation__background {
-      background-image: url('../../public/img/section-4-illo-background.jpg');
-      height: 221px;
-      width: 558px;
-    }
-  }
-
-  &.-money {
-    margin-bottom: 140px;
-
-    .conversation__icon {
-      background-image: url('../../public/img/section-5-illo.png');
-    }
-    .conversation__background {
-      background-image: url('../../public/img/section-5-illo-background.jpg');
-      height: 187px;
-      width: 536px;
-    }
-  }
-
-  &.-cheer {
-    margin-bottom: 0px;
-
-    .conversation__icon {
-      background-image: url('../../public/img/section-6-illo.png');
-      top: -100px;
-      width: 195px;
-    }
-    .conversation__background {
-      background-image: url('../../public/img/section-6-illo-background.jpg');
-      height: 216px;
-      transform: rotate(180deg);
-      width: 396px;
-    }
-  }
-
-  .narrow-padding {
-    position: relative;
-    z-index: 1;
-  }
-}
-
-.conversation__wrap {
-  display: flex;
-  flex-direction: column;
-}
-
-.conversation__icon {
-  height: 200px;
-  left: 0;
-  margin: 0 auto;
-  right: 0;
-  top: -62px;
-  width: 100px;
-  z-index: 2;
-}
-
-.conversation__background {
-  left: 0;
-  margin: 0 auto;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
-
-
-//BEHIND THE SCENES SECTION
-
-.flo-diagram {
-  background-image: url("../../public/img/giant-florence-of-doom.png");
-  height: 300px;
-  margin: 30px auto 0;
-  position: relative;
-  width: 160px;
-}
-
-
-//FOOTER
 
 .contact-btn {
+  @extend %font-smoothing;
   background-color: transparent;
   border-radius: 32px;
-  border: 4px solid #f2c84d;
-  color: #f2c84d;
+  border: 4px solid color(yellow);
+  color: color(yellow);
   display: block;
   margin: 0 auto;
   padding: 14px 0 12px;
   width: 220px;
 }
-
-.footer__bg {
-  background-image: url("../../public/img/section-6-illo-background.png");
-  bottom: -40px;
-  height: 300px;
-  left: 0;
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-  width: 500px;
-}
-
-.footer__img {
-  width: 110px;
-  bottom: -105px;
-  height: 190px;
-  margin: 0 auto;
-  background-image: url("../../public/img/giant-florence-of-doom.png");
-  position: relative;
-}
-
-//ANIMATE CONVERSATION
-.conversation__chat {
-  display: flex;
-  flex-direction: column;
-  margin-left: 50px;
-}
-
-//CHAT BUBBLES
-.bubble {
-  animation-iteration-count: 1;
-  animation: appear-text 0.2s ease-out forwards paused;
-  margin-bottom: 7px;
-  opacity: 0;
-  position: relative;
-  transform-origin: left bottom;
-
-  //BUBBLE - formatting how the bubbles look
-  p, .spinner {
-    background-color: #e2ebe9;
-    border-radius: 15px;
-    color: #252224;
-    display: inline-block;
-    line-height: 1.375;
-    margin: 0;
-    padding: 12px;
-  }
-
-  //BUBBLE - typing spinner
-  .spinner {
-    bottom: 0;
-    position: absolute;
-
-    > span {
-      animation: typing-dots 1s ease-in infinite;
-      background: #514D4C;
-      border-radius: 100px;
-      display: inline-block;
-      height: 8px;
-      width: 8px;
-
-      &:nth-child(2) {
-        animation-delay: 0.2s;
-      }
-      &:nth-child(3) {
-        animation-delay: 0.4s
-      }
-    }
-  }
-
-  //BUBBLE - pseudo elements to get the tail on chat bubbles
-  &.-bot-avatar,
-  &.-response {
-
-    //gray tail
-    &::after {
-      content: '';
-      position: absolute;
-      background-color: #e2ebe9;
-      bottom: 7px;
-      height: 10px;
-      width: 20px;
-    }
-
-    //white circle to partially cover gray tail
-    .spinner::after,
-    p::after {
-      content: '';
-      position: absolute;
-      background-color: white;
-      border-radius: 100px;
-      bottom: 8px;
-      height: 20px;
-      width: 20px;
-      z-index: 1;
-    }
-  }
-
-  //BUBBLE - avatar bubbles
-  &.-bot-avatar {
-    &::before {
-      content: url('../../public/img/avatar_2.png');
-      background-color: #f2c84d;
-      border-radius: 300px;
-      bottom: 0;
-      left: -50px;
-      padding: 4px 6px 0 5px;
-      position: absolute;
-      z-index: 2;
-    }
-
-    &::after {
-      left: -10px;
-    }
-
-    > .spinner::after,
-    > p::after, {
-      left: -20px;
-    }
-  }
-
-  //BUBBLE - response bubbles
-  &.-response {
-    align-self: flex-end;
-    animation-name: appear-text-right;
-    transform-origin: right bottom;
-
-    p {
-      background-color: #1793ad;
-      color: white
-    }
-
-    &::after {
-      background-color: #1793ad;
-      right: -8px;
-    }
-
-    > p::after {
-      bottom: 7px;
-      right: -20px;
-    }
-  }
-
-  //BUBBLE - flo bubbles
-  &.-flo {
-    p {
-      opacity: 0;
-    }
-
-    //hiding spinners after animation is done
-    &.finished {
-      .spinner {
-        visibility: hidden;
-      }
-
-      p {
-        opacity: 1;
-      }
-    }
-  }
-}
-
-
-//CHAT BUBBLES && SPINNER ANIMATION
-@keyframes appear-text {
-  0% {
-    top: -10px;
-    transform: translateY(20px) translateX(-30px) scale(0.5)
-  }
-  50% {
-    top: 3px;
-  }
-  100% {
-    opacity: 1;
-    top: 0px;
-    transform: translateY(0px) translateX(0px) scale(1)
-  }
-}
-
-@keyframes appear-text-right {
-  0% {
-    top: -10px;
-    transform: translateY(20px) translateX(30px) scale(0.5)
-  }
-  50% {
-    top: 3px;
-  }
-  100% {
-    opacity: 1;
-    top: 0px;
-    transform: translateY(0px) translateX(0px) scale(1)
-  }
-}
-
-@keyframes typing-dots {
-  0% {
-    background: #cacaca
-  }
-  60% {
-    background: #514D4C
-  }
-}
-
-
-//FOOTER
-
-.footer {
-  .heading-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.logo {
-  background: url("../../public/img/viget.png");
-  height: 62px;
-  position: relative;
-  right: -30px;
-  width: 125px;
-
-  &::before {
-    content: url('../../public/img/viget_2.png');
-    position: absolute;
-    left: -70px;
-  }
-}
-
 
 
 @media screen and (min-width: 1017px) {
@@ -795,6 +163,7 @@ cite a {
     border-radius: 6px;
 
     &.-cup {
+
       .conversation__icon {
         bottom: -22px;
         height: 171px;
@@ -802,6 +171,7 @@ cite a {
         top: inherit;
         width: 160px;
       }
+
       .conversation__background {
         bottom: 0;
         left: 125px;
@@ -811,6 +181,7 @@ cite a {
     }
 
     &.-pills {
+
       .conversation__icon {
         bottom: -40px;
         height: 198px;
@@ -818,6 +189,7 @@ cite a {
         top: inherit;
         width: 130px;
       }
+
       .conversation__background {
         bottom: 0;
         left: 105px;
@@ -827,23 +199,27 @@ cite a {
     }
 
     &.-temp {
+
       .conversation__icon {
         height: 146px;
         left: 408px;
         top: -30px;
         width: 103px;
       }
+
       .conversation__background {
         left: 250px;
       }
     }
 
     &.-box {
+
       .conversation__icon {
         height: 141px;
         left: 121px;
         width: 408px;
       }
+
       .conversation__background {
         left: 20px;
       }
@@ -858,12 +234,14 @@ cite a {
         top: -83px;
         width: 159px;
       }
+
       .conversation__background {
         left: 20px;
       }
     }
 
     &.-cheer {
+
       .conversation__icon {
         bottom: 0;
         height: 105px;

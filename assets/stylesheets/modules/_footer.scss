@@ -1,0 +1,47 @@
+
+//FOOTER
+.footer {
+  .heading-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.logo {
+  background: url("../../public/img/viget.png");
+  height: 62px;
+  position: relative;
+  right: -30px;
+  width: 125px;
+
+  &::before {
+    content: url('../../public/img/viget_2.png');
+    position: absolute;
+    left: -70px;
+  }
+}
+
+
+.footer__bg {
+  @extend %background-position;
+  background-image: url("../../public/img/section-6-illo-background.png");
+  bottom: -40px;
+  height: 300px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 500px;
+}
+
+.footer__img {
+  @extend %background-position;
+  width: 110px;
+  bottom: -105px;
+  height: 190px;
+  margin: 0 auto;
+  background-image: url("../../public/img/giant-florence-of-doom.png");
+  position: relative;
+}

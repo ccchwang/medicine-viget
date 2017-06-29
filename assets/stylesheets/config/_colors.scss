@@ -1,0 +1,17 @@
+$colors: (
+  red: #EC4444,
+  orange: #BB7140,
+  darkBlue: #0e5254,
+  lightBlue: #1394AA,
+  yellow: #f2c84d,
+  green: #d2e7e2,
+  deepBlue: #184d66,
+  lightGray: #e2ebe9,
+  darkGray: #514D4C,
+  textBlue: #1793ad
+);
+
+@function color($value) {
+  @return map-get($colors, $value);
+}
+
