@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass -w assets/stylesheets/style.scss -o public/stylesheets"
+    "build-css": "node-sass -w assets/stylesheets/style.scss -o public/stylesheets",
+    "build-js": "browserify ./assets/js/main.js -o ./public/js/bundle.js"
   },
   "keywords": [],
   "author": "",

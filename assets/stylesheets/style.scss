@@ -2,6 +2,7 @@
 @import './config/colors';
 
 //base
+@import './base/layout';
 @import './base/typography';
 @import './base/backgrounds';
 @import './base/padding';
@@ -17,29 +18,7 @@
 
 
 
-//GENERAL
-
-html {
-  overflow: auto
-}
-
-body {
-  height: 100%;
-  overflow: hidden;
-  width: 100%;
-}
-
-* {
-  box-sizing: border-box;
-  color: #504949;
-  font-family: "Poppins";
-  font-weight: 300;
-}
-
-
-.heading-container {
-  text-align: center;
-}
+//utility class
 
 .sr-only {
   border: none;
@@ -52,25 +31,8 @@ body {
   width: 1px;
 }
 
-.phone {
-  @extend %background-position;
-}
 
-
-.contact-btn {
-  @extend %font-smoothing;
-  background-color: transparent;
-  border-radius: 32px;
-  border: 4px solid color(yellow);
-  color: color(yellow);
-  display: block;
-  margin: 0 auto;
-  padding: 14px 0 12px;
-  width: 220px;
-}
-
-
-//***I know the media queries should be nested under the respective elements, but left them here for sake of not rewriting everything***
+//***I know media queries should be nested under the respective elements, but left them here for time's sake***
 
 @media screen and (min-width: 1017px) {
 

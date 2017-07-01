@@ -28,7 +28,9 @@ npm run build-css
 
 **Build the .js file**
 ```bash
-browserify ./assets/js/main.js -o ./public/js/bundle.js
+npm run build-js
 ```
+This runs the script `browserify ./assets/js/main.js -o ./public/js/bundle.js`, which outputs a bundled file in your `public/` folder.
 
-To view the page, open the index.html file in your browser.
+**View page**
+Open the index.html file in your browser.

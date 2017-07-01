@@ -4,3 +4,7 @@
 .question {
   padding-bottom: 140px;
 }
+
+.phone {
+  @extend %background-position;
+}

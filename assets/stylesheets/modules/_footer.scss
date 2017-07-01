@@ -23,7 +23,6 @@
   }
 }
 
-
 .footer__bg {
   @extend %background-position;
   background-image: url("../../public/img/section-6-illo-background.png");
@@ -44,4 +43,16 @@
   margin: 0 auto;
   background-image: url("../../public/img/giant-florence-of-doom.png");
   position: relative;
+}
+
+.contact-btn {
+  @extend %font-smoothing;
+  background-color: transparent;
+  border-radius: 32px;
+  border: 4px solid color(yellow);
+  color: color(yellow);
+  display: block;
+  margin: 0 auto;
+  padding: 14px 0 12px;
+  width: 220px;
 }

@@ -1,32 +1,32 @@
 const inViewport = require('in-viewport');
 
+
 //HELPER FUNCTIONS
 const selectElements = function (selector) {
   let nodes = document.querySelectorAll(selector)
   return [].slice.call(nodes)
 };
 
+const triggerAnimation = function(bubble) {
+  const delay = Number(bubble.dataset.delay);
+
+  setTimeout(function(){
+    bubble.className += " typing";
+  }, delay)
+}
+
 const animateWhenVisible = function (card) {
+  //get card's classes so it can be used as a querying string
+  const cardSelector = card.className.split(" ").join(".");
 
-    //get card's classes so it can be used as a querying string
-    const cardSelector = card.className.split(" ").join(".");
+  //find all chat bubbles inside card
+  const chatList = selectElements(`.${cardSelector} .bubble`);
 
-    //find all chat bubbles inside card
-    const chatList = selectElements(`.${cardSelector} .bubble`);
+  //trigger animation for each bubble
+  chatList.forEach(bubble => triggerAnimation(bubble))
 
-    //for each bubble, apply animation delay as indicated by element's data-delay attribute
-    chatList.forEach(text => {
-      text.style.animationDelay = `${text.dataset.delay}ms`;
-      text.style.animationPlayState = 'running';
-
-      //adding 'finished' class will cause bubble's spinner to hide and bubble's text to appear
-      setTimeout(function(){
-        text.className += " finished";
-      }, `${1000 + Number(text.dataset.delay)}`)
-    })
-
-    //find and animate the header icon associated with each card
-    document.querySelector(`.${cardSelector} .conversation__icon`).className += " animate";
+  //find and animate the header icon associated with each card
+  document.querySelector(`.${cardSelector} .conversation__icon`).className += " animate";
 };
 
 
@@ -35,7 +35,6 @@ const convoCards = selectElements('.conversation');
 
 //FOR EACH CARD, define inViewport callback function
 convoCards.forEach(card => inViewport(card, { offset: -200 }, () => animateWhenVisible(card)))
-
 
 
 
