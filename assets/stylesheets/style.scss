@@ -70,6 +70,8 @@ body {
 }
 
 
+//***I know the media queries should be nested under the respective elements, but left them here for sake of not rewriting everything***
+
 @media screen and (min-width: 1017px) {
 
   .bg-green, .bg-blue, .bg-gradient {

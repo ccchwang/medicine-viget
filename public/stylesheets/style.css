@@ -278,12 +278,13 @@ cite a {
   margin-left: 50px; }
 
 .bubble {
-  animation-iteration-count: 1;
-  animation: appear-text 0.2s ease-out forwards paused;
   margin-bottom: 7px;
   opacity: 0;
   position: relative;
-  transform-origin: left bottom; }
+  top: -10px;
+  transform-origin: left bottom;
+  transform: translateY(20px) translateX(-30px) scale(0.5);
+  transition: all 0.2s ease-out; }
   .bubble p, .bubble .spinner {
     background-color: #e2ebe9;
     border-radius: 15px;
@@ -296,6 +297,7 @@ cite a {
     bottom: 0;
     position: absolute; }
     .bubble .spinner > span {
+      -webkit-animation: typing-dots 1s ease-in infinite;
       animation: typing-dots 1s ease-in infinite;
       background: #514D4C;
       border-radius: 100px;
@@ -303,8 +305,10 @@ cite a {
       height: 8px;
       width: 8px; }
       .bubble .spinner > span:nth-child(2) {
+        -webkit-animation-delay: 0.2s;
         animation-delay: 0.2s; }
       .bubble .spinner > span:nth-child(3) {
+        -webkit-animation-delay: 0.4s;
         animation-delay: 0.4s; }
   .bubble.-bot-avatar::after, .bubble.-response::after {
     background-color: #e2ebe9;
@@ -340,8 +344,8 @@ cite a {
     left: -20px; }
   .bubble.-response {
     align-self: flex-end;
-    animation-name: appear-text-right;
-    transform-origin: right bottom; }
+    transform-origin: right bottom;
+    transform: translateY(20px) translateX(30px) scale(0.5); }
     .bubble.-response p {
       background-color: #1793ad;
       color: white; }
@@ -353,32 +357,16 @@ cite a {
       right: -20px; }
   .bubble.-flo p {
     opacity: 0; }
-  .bubble.-flo.finished .spinner {
-    visibility: hidden; }
-  .bubble.-flo.finished p {
-    opacity: 1; }
-
-@keyframes appear-text {
-  0% {
-    top: -10px;
-    transform: translateY(20px) translateX(-30px) scale(0.5); }
-  50% {
-    top: 3px; }
-  100% {
+  .bubble.typing {
     opacity: 1;
     top: 0px;
-    transform: translateY(0px) translateX(0px) scale(1); } }
-
-@keyframes appear-text-right {
-  0% {
-    top: -10px;
-    transform: translateY(20px) translateX(30px) scale(0.5); }
-  50% {
-    top: 3px; }
-  100% {
-    opacity: 1;
-    top: 0px;
-    transform: translateY(0px) translateX(0px) scale(1); } }
+    transform: translateY(0px) translateX(0px) scale(1); }
+    .bubble.typing .spinner {
+      transition-delay: 1s;
+      visibility: hidden; }
+    .bubble.typing p {
+      transition-delay: 1s;
+      opacity: 1; }
 
 @keyframes typing-dots {
   0% {

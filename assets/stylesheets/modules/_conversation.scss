@@ -124,12 +124,13 @@
 
 //CHAT BUBBLES
 .bubble {
-  animation-iteration-count: 1;
-  animation: appear-text 0.2s ease-out forwards paused;
   margin-bottom: 7px;
   opacity: 0;
   position: relative;
+  top: -10px;
   transform-origin: left bottom;
+  transform: translateY(20px) translateX(-30px) scale(0.5);
+  transition: all 0.2s ease-out;
 
   //BUBBLE - formatting how the bubbles look
   p, .spinner {
@@ -148,6 +149,7 @@
     position: absolute;
 
     > span {
+      -webkit-animation: typing-dots 1s ease-in infinite;
       animation: typing-dots 1s ease-in infinite;
       background: color(darkGray);
       border-radius: 100px;
@@ -156,9 +158,11 @@
       width: 8px;
 
       &:nth-child(2) {
+        -webkit-animation-delay: 0.2s;
         animation-delay: 0.2s;
       }
       &:nth-child(3) {
+        -webkit-animation-delay: 0.4s;
         animation-delay: 0.4s
       }
     }
@@ -220,8 +224,8 @@
   //BUBBLE - response bubbles
   &.-response {
     align-self: flex-end;
-    animation-name: appear-text-right;
     transform-origin: right bottom;
+    transform: translateY(20px) translateX(30px) scale(0.5);
 
     p {
       @extend %font-smoothing;
@@ -245,51 +249,28 @@
     p {
       opacity: 0;
     }
+  }
 
-    //hiding spinners after animation is done
-    &.finished {
-      .spinner {
-        visibility: hidden;
-      }
+  //trigger animation
+  &.typing {
+    opacity: 1;
+    top: 0px;
+    transform: translateY(0px) translateX(0px) scale(1);
 
-      p {
-        opacity: 1;
-      }
+    .spinner {
+      transition-delay: 1s;
+      visibility: hidden;
+    }
+
+    p {
+      transition-delay: 1s;
+      opacity: 1;
     }
   }
 }
 
 
-//CHAT BUBBLES && SPINNER ANIMATION
-@keyframes appear-text {
-  0% {
-    top: -10px;
-    transform: translateY(20px) translateX(-30px) scale(0.5)
-  }
-  50% {
-    top: 3px;
-  }
-  100% {
-    opacity: 1;
-    top: 0px;
-    transform: translateY(0px) translateX(0px) scale(1)
-  }
-}
-
-@keyframes appear-text-right {
-  0% {
-    top: -10px;
-    transform: translateY(20px) translateX(30px) scale(0.5)
-  }
-  50% {
-    top: 3px;
-  }
-  100% {
-    opacity: 1;
-    top: 0px;
-    transform: translateY(0px) translateX(0px) scale(1)
-  }
-}
+//SPINNER ANIMATION
 
 @keyframes typing-dots {
   0% {
@@ -299,5 +280,4 @@
     background: color(darkGray)
   }
 }
-
 
