@@ -1,0 +1,96 @@
+//TEXT STYLES
+
+%text-small {
+  font-size: 18px;
+  line-height: 1.777777778;
+}
+
+%text-caps {
+  text-transform: uppercase;
+}
+
+%text-bold {
+  font-weight: 600;
+}
+
+%text-color-accent {
+  color: color(orange);
+}
+
+%font-smoothing {
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+}
+
+.text--subheading {
+  @extend %text-small;
+  @extend %text-caps;
+  @extend %text-bold;
+  @extend %text-color-accent;
+}
+
+.text {
+  &.-caps {
+    @extend %text-caps;
+  }
+
+  &.-centered {
+    text-align: center;
+  }
+
+  &.-bold {
+    @extend %text-bold
+  }
+
+  &.-wide-spacing {
+    letter-spacing: .23em;
+  }
+
+  &.-serif {
+    font-family: 'Merriweather';
+    font-weight: 300;
+  }
+
+  &.-x-small {
+    font-size: 14px;
+    line-height: 1.733333333;
+  }
+
+  &.-small {
+    @extend %text-small;
+  }
+
+  &.-medium {
+    font-size: 20px;
+    line-height: 1.428571429;
+  }
+
+  &.-large {
+    font-size: 28px;
+    line-height: 1.428571429;
+  }
+
+  &.-color-dark {
+    color: color(darkBlue);
+  }
+
+  &.-color-lightblue {
+    color: color(lightBlue);
+    margin-bottom: 30px
+  }
+
+  &.-color-white {
+    color:white;
+  }
+
+  &.-color-accent {
+    @extend %text-color-accent;
+  }
+  &.-font-smooth {
+    @extend %font-smoothing;
+  }
+}

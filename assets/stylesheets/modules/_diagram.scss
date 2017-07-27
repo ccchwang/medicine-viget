@@ -1,0 +1,71 @@
+//DIAGRAM SECTION
+
+.diagram {
+  padding-top: 25px;
+  position: relative;
+}
+
+.diagram-detail {
+  padding-top: 65px;
+
+  .diagram-detail__card {
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 73px 38px 38px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    .diagram-detail__card__content {
+      @extend %text-small;
+      line-height: 1.375
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 40px
+  }
+}
+
+.icon {
+  border-radius: 100px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+
+  &.-borders {
+    border: 10px solid rgba(#fff, 0.57);
+    height: 88px;
+    top: -33.5px;
+    width: 88px;
+  }
+
+  &.-color {
+    align-items: center;
+    background-color: color(yellow);
+    border: 7px solid white;
+    display: flex;
+    height: 71px;
+    justify-content: center;
+    top: -25px;
+    width: 71px;
+  }
+
+  .resize {
+    width: 55%;
+    padding-top: 4px
+  }
+}
+
+
+.flo-diagram {
+  @extend %background-position;
+  background-image: url("../../public/img/giant-florence-of-doom.png");
+  height: 300px;
+  margin: 30px auto 0;
+  position: relative;
+  width: 160px;
+}

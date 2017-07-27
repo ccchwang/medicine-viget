@@ -1,31 +1,47 @@
 const inViewport = require('in-viewport');
 
-//find all convo cards
-const convoCards = document.getElementsByClassName('conversation');
 
-//for each card, define inViewport callback function
-[].slice.call(convoCards).forEach(card => inViewport(card, { offset: -200 }, function() {
+//HELPER FUNCTIONS
+const selectElements = function (selector) {
+  let nodes = document.querySelectorAll(selector)
+  return [].slice.call(nodes)
+};
 
-    //get card's classes so it can be used as a querying string
-    const cardSelector = card.className.split(" ").join(".");
+const triggerAnimation = function(bubble) {
+  const delay = Number(bubble.dataset.delay);
 
-    //find all chat bubbles inside card
-    const chatList = document.querySelectorAll(`.${cardSelector} .bubble`);
+  setTimeout(function(){
+    bubble.className += " typing";
+  }, delay)
+}
 
-    //for each bubble, apply animation delay as indicated by element's data-delay attribute
-    [].slice.call(chatList).forEach(text => {
-      text.style.animationDelay = `${text.dataset.delay}ms`;
-      text.style.animationPlayState = 'running';
+const animateWhenVisible = function (card) {
+  //get card's classes so it can be used as a querying string
+  const cardSelector = card.className.split(" ").join(".");
 
-      //adding 'finished' class will cause bubble's spinner to hide and bubble's text to appear
-      setTimeout(function(){
-        text.className += " finished";
-      }, `${1000 + Number(text.dataset.delay)}`)
-    })
+  //find all chat bubbles inside card
+  const chatList = selectElements(`.${cardSelector} .bubble`);
 
-    //find and animate the header icon associated with each card
-    document.querySelector(`.${cardSelector} .conversation__icon`).className += " animate";
-}))
+  //trigger animation for each bubble
+  chatList.forEach(bubble => triggerAnimation(bubble))
+
+  //find and animate the header icon associated with each card
+  document.querySelector(`.${cardSelector} .conversation__icon`).className += " animate";
+};
+
+
+//FIND ALL CONVO CARDS
+const convoCards = selectElements('.conversation');
+
+//FOR EACH CARD, define inViewport callback function
+convoCards.forEach(card => inViewport(card, { offset: -200 }, () => animateWhenVisible(card)))
+
+
+
+
+
+
+
 
 
 /*

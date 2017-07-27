@@ -1,0 +1,21 @@
+.bg-green {
+  background-color: color(green);
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-blue {
+  background-color: color(deepBlue);
+}
+
+.bg-gradient {
+  background: linear-gradient(color(deepBlue), color(green));
+}
+
+%background-position {
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute
+}

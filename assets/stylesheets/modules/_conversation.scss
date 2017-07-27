@@ -1,0 +1,283 @@
+//CONVERSATION SECTION
+
+.conversation {
+  background-color: white;
+  margin: 0 auto 100px;
+  max-width: 1075px;
+
+  &.-cup {
+    .conversation__icon {
+      background-image: url('../../public/img/section-1-illo.png');
+    }
+    .conversation__background {
+      background-image: url('../../public/img/section-1-illo-background.jpg');
+      height: 126px;
+      transform: rotate(180deg);
+      width: 312px;
+    }
+  }
+
+  &.-pills {
+    .conversation__icon {
+      background-image: url('../../public/img/pills_3.png');
+      width: 80px;
+    }
+    .conversation__background {
+      background-image: url('../../public/img/section-2-illo-background.jpg');
+      height: 186px;
+      transform: rotate(180deg);
+      width: 330px;
+    }
+  }
+
+  &.-temp {
+    .conversation__icon {
+      background-image: url('../../public/img/section-3-illo.png');
+      width: 80px;
+    }
+    .conversation__background {
+      background-image: url('../../public/img/section-3-illo-background.jpg');
+      height: 166px;
+      width: 402px;
+    }
+  }
+
+  &.-box {
+    .conversation__icon{
+      top: -40px;
+      background-image: url('../../public/img/section-4-illo.png');
+      width: 260px;
+    }
+    .conversation__background {
+      background-image: url('../../public/img/section-4-illo-background.jpg');
+      height: 221px;
+      width: 558px;
+    }
+  }
+
+  &.-money {
+    margin-bottom: 140px;
+
+    .conversation__icon {
+      background-image: url('../../public/img/section-5-illo.png');
+    }
+    .conversation__background {
+      background-image: url('../../public/img/section-5-illo-background.jpg');
+      height: 187px;
+      width: 536px;
+    }
+  }
+
+  &.-cheer {
+    margin-bottom: 0px;
+
+    .conversation__icon {
+      background-image: url('../../public/img/section-6-illo.png');
+      top: -100px;
+      width: 195px;
+    }
+    .conversation__background {
+      background-image: url('../../public/img/section-6-illo-background.jpg');
+      height: 216px;
+      transform: rotate(180deg);
+      width: 396px;
+    }
+  }
+
+  .narrow-padding {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.conversation__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.conversation__icon {
+  @extend %background-position;
+  height: 200px;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: -62px;
+  width: 100px;
+  z-index: 2;
+}
+
+.conversation__background {
+  @extend %background-position;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+//ANIMATE CONVERSATION
+.conversation__chat {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+//CHAT BUBBLES
+.bubble {
+  margin-bottom: 7px;
+  opacity: 0;
+  position: relative;
+  top: -10px;
+  transform-origin: left bottom;
+  transform: translateY(20px) translateX(-30px) scale(0.5);
+  transition: all 0.2s ease-out;
+
+  //BUBBLE - formatting how the bubbles look
+  p, .spinner {
+    background-color: color(lightGray);
+    border-radius: 15px;
+    color: #252224;
+    display: inline-block;
+    line-height: 1.375;
+    margin: 0;
+    padding: 12px;
+  }
+
+  //BUBBLE - typing spinner
+  .spinner {
+    bottom: 0;
+    position: absolute;
+
+    > span {
+      -webkit-animation: typing-dots 1s ease-in infinite;
+      animation: typing-dots 1s ease-in infinite;
+      background: color(darkGray);
+      border-radius: 100px;
+      display: inline-block;
+      height: 8px;
+      width: 8px;
+
+      &:nth-child(2) {
+        -webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        -webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s
+      }
+    }
+  }
+
+  //BUBBLE - pseudo elements to get the tail on chat bubbles
+  &.-bot-avatar,
+  &.-response {
+
+    //gray tail
+    &::after {
+      background-color: color(lightGray);
+      bottom: 7px;
+      content: '';
+      height: 10px;
+      position: absolute;
+      width: 20px;
+    }
+
+    //white circle to partially cover gray tail
+    .spinner,
+    p {
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        border-radius: 100px;
+        bottom: 8px;
+        height: 20px;
+        width: 20px;
+        z-index: 1;
+      }
+    }
+  }
+
+  //BUBBLE - avatar bubbles
+  &.-bot-avatar {
+    &::before {
+      content: url('../../public/img/avatar_2.png');
+      background-color: color(yellow);
+      border-radius: 300px;
+      bottom: 0;
+      left: -50px;
+      padding: 4px 6px 0 5px;
+      position: absolute;
+      z-index: 2;
+    }
+
+    &::after {
+      left: -10px;
+    }
+
+    > .spinner::after,
+    > p::after, {
+      left: -20px;
+    }
+  }
+
+  //BUBBLE - response bubbles
+  &.-response {
+    align-self: flex-end;
+    transform-origin: right bottom;
+    transform: translateY(20px) translateX(30px) scale(0.5);
+
+    p {
+      @extend %font-smoothing;
+      background-color: color(textBlue);
+      color: white;
+    }
+
+    &::after {
+      background-color: color(textBlue);
+      right: -8px;
+    }
+
+    > p::after {
+      bottom: 7px;
+      right: -20px;
+    }
+  }
+
+  //BUBBLE - flo bubbles
+  &.-flo {
+    p {
+      opacity: 0;
+    }
+  }
+
+  //trigger animation
+  &.typing {
+    opacity: 1;
+    top: 0px;
+    transform: translateY(0px) translateX(0px) scale(1);
+
+    .spinner {
+      transition-delay: 1s;
+      visibility: hidden;
+    }
+
+    p {
+      transition-delay: 1s;
+      opacity: 1;
+    }
+  }
+}
+
+
+//SPINNER ANIMATION
+
+@keyframes typing-dots {
+  0% {
+    background: #cacaca
+  }
+  60% {
+    background: color(darkGray)
+  }
+}
+
